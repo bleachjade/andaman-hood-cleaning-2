@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andaman Hood Cleaning | Certified Commercial Kitchen Exhaust Cleaning</title>
+    <meta name="description"
+        content="Andaman Hood Cleaning offers professional, NFPA 96 certified commercial kitchen hood, exhaust, and duct cleaning services. Prevent fires and stay compliant.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind Config & Custom Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0ea5e9', // Light Blue (Sky 500)
+                        primaryLight: '#e0f2fe', // Sky 100
+                        primaryDark: '#0369a1', // Sky 700
+                        secondary: '#1e293b', // Slate 800
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Animations & Base Styles */
+        body {
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Reveal Animation on Scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* View Transition */
+        .page-view {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .page-view.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Floating Animation */
+        .float-anim {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Before/After Slider Custom Styles */
+        .ba-slider {
+            position: relative;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        .ba-slider img {
+            pointer-events: none;
+        }
+
+        .ba-before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+            clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+            z-index: 10;
+        }
+
+        .ba-before img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .ba-slider-line {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: white;
+            transform: translateX(-50%);
+            z-index: 15;
+            pointer-events: none;
+        }
+
+        .ba-slider input[type="range"] {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: ew-resize;
+            z-index: 30;
+        }
+
+        .ba-handle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            z-index: 20;
+            pointer-events: none;
+            color: #0ea5e9;
+            font-size: 1.2rem;
+        }
+
+        /* Loader */
+        .loader {
+            border-top-color: #0ea5e9;
+            -webkit-animation: spinner 1.5s linear infinite;
+            animation: spinner 1.5s linear infinite;
+        }
+
+        @keyframes spinner {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-700 font-sans relative">
+
+    <!-- Top Bar -->
+    <div class="bg-secondary text-white py-2 px-4 text-sm hidden md:block">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex space-x-6">
+                <span><i class="fas fa-phone-alt text-primary mr-2"></i> 1-800-555-HOOD</span>
+                <span><i class="fas fa-envelope text-primary mr-2"></i> info@andamanhoodcleaning.com</span>
+                <span><i class="fas fa-clock text-primary mr-2"></i> 24/7 Emergency Service Available</span>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-primary transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-primary transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-primary transition"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" onclick="navigate('home'); return false;" class="flex items-center gap-3 group">
+                <div class="w-16 h-16 relative flex-shrink-0">
+                    <svg viewBox="0 0 200 200" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="100" r="95" fill="none" stroke="#1774b6" stroke-width="8" />
+                        <path d="M60 50 Q65 60 75 60 Q65 60 60 70 Q55 60 45 60 Q55 60 60 50" fill="#1774b6" />
+                        <path d="M85 45 Q88 52 95 52 Q88 52 85 59 Q82 52 75 52 Q82 52 85 45" fill="#1774b6" />
+                        <path d="M85 50 L115 50 L115 70 L160 105 L160 120 L40 120 L40 105 L85 70 Z" fill="#1774b6" />
+                        <path d="M35 130 Q100 155 165 130" fill="none" stroke="#2faee0" stroke-width="12"
+                            stroke-linecap="round" />
+                        <path d="M45 150 Q100 170 155 150" fill="none" stroke="#2faee0" stroke-width="12"
+                            stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <span
+                        class="text-2xl font-black text-brand-blue uppercase tracking-tight leading-none group-hover:text-primary transition-colors">Andaman
+                        Hood</span>
+                    <span class="text-sm font-bold text-brand-light tracking-widest uppercase mt-1">Cleaning</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="#" onclick="navigate('home')"
+                    class="nav-link text-slate-600 hover:text-primary font-medium transition">Home</a>
+                <a href="#" onclick="navigate('about')"
+                    class="nav-link text-slate-600 hover:text-primary font-medium transition">About Us</a>
+                <a href="#" onclick="navigate('services')"
+                    class="nav-link text-slate-600 hover:text-primary font-medium transition">Services & Industries</a>
+                <a href="#" onclick="navigate('areas')"
+                    class="nav-link text-slate-600 hover:text-primary font-medium transition">Service Areas</a>
+                <a href="#" onclick="navigate('blog')"
+                    class="nav-link text-slate-600 hover:text-primary font-medium transition">Blog</a>
+                <a href="#" onclick="navigate('faq')"
+                    class="nav-link text-slate-600 hover:text-primary font-medium transition">FAQs</a>
+                <a href="#" onclick="navigate('contact')"
+                    class="nav-link text-slate-600 hover:text-primary font-medium transition">Contact</a>
+                <button onclick="toggleModal('quoteModal')"
+                    class="bg-primary hover:bg-primaryDark text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-primary/30 transition transform hover:-translate-y-0.5">
+                    Get a Quote
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-2xl text-secondary" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="flex flex-col px-4 py-4 space-y-4">
+                <a href="#" onclick="navigate('home'); toggleMobileMenu()" class="text-slate-600 font-medium">Home</a>
+                <a href="#" onclick="navigate('about'); toggleMobileMenu()" class="text-slate-600 font-medium">About
+                    Us</a>
+                <a href="#" onclick="navigate('services'); toggleMobileMenu()"
+                    class="text-slate-600 font-medium">Services & Industries</a>
+                <a href="#" onclick="navigate('areas'); toggleMobileMenu()" class="text-slate-600 font-medium">Service
+                    Areas</a>
+                <a href="#" onclick="navigate('blog'); toggleMobileMenu()" class="text-slate-600 font-medium">Blog</a>
+                <a href="#" onclick="navigate('faq'); toggleMobileMenu()" class="text-slate-600 font-medium">FAQs</a>
+                <a href="#" onclick="navigate('contact'); toggleMobileMenu()"
+                    class="text-slate-600 font-medium">Contact</a>
+                <button onclick="toggleModal('quoteModal'); toggleMobileMenu()"
+                    class="bg-primary text-white px-6 py-3 rounded-md font-semibold text-center">Get a Quote</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT AREA -->
+    <main id="app-content">
+
+        <!-- ================= HOMEPAGE ================= -->
+        <section id="page-home" class="page-view active">
+            <!-- Hero Section -->
+            <div class="relative bg-secondary text-white overflow-hidden">
+                <div class="absolute inset-0">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80"
+                        alt="Commercial Kitchen" class="w-full h-full object-cover opacity-20">
+                    <div class="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/90 to-transparent"></div>
+                </div>
+
+                <div
+                    class="container mx-auto px-4 py-24 lg:py-32 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="reveal">
+                        <div
+                            class="inline-block bg-primary/20 text-primaryLight px-4 py-1.5 rounded-full text-sm font-semibold mb-6 border border-primary/30">
+                            <i class="fas fa-shield-alt mr-2"></i> NFPA 96 Certified Professionals
+                        </div>
+                        <h1 class="font-heading text-4xl lg:text-6xl font-bold leading-tight mb-6">
+                            Protect Your Kitchen with <span class="text-primary">Expert Hood Cleaning</span>
+                        </h1>
+                        <p class="text-lg text-slate-300 mb-8 max-w-xl">
+                            Andaman Hood Cleaning provides elite, certified exhaust system cleaning to prevent fire
+                            hazards, ensure health code compliance, and keep your commercial kitchen running safely.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="toggleModal('quoteModal')"
+                                class="bg-primary hover:bg-primaryDark text-white px-8 py-3.5 rounded-full font-bold text-lg shadow-lg shadow-primary/40 transition transform hover:scale-105">
+                                Request Free Inspection
+                            </button>
+                            <button onclick="navigate('services')"
+                                class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-3.5 rounded-full font-bold text-lg backdrop-blur-sm transition">
+                                Explore Services
+                            </button>
+                        </div>
+                        <div class="mt-10 flex items-center space-x-6 text-sm text-slate-400 font-medium">
+                            <div class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Fully
+                                Insured</div>
+                            <div class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Photo
+                                Proof Provided</div>
+                            <div class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> 24/7
+                                Support</div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Lead Capture Form -->
+                    <div class="bg-white text-slate-800 p-8 rounded-2xl shadow-2xl reveal">
+                        <h3 class="font-heading text-2xl font-bold mb-2">Get Your Instant Quote</h3>
+                        <p class="text-slate-500 text-sm mb-6">Fill out the form below and we'll contact you within 15
+                            minutes.</p>
+                        <form onsubmit="event.preventDefault(); alert('Thank you! We will contact you shortly.');">
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-sm font-medium mb-1">Full Name</label>
+                                    <input type="text"
+                                        class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+                                        required placeholder="John Doe">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-1">Restaurant/Business Name</label>
+                                    <input type="text"
+                                        class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+                                        required placeholder="The Great Grill">
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium mb-1">Phone</label>
+                                        <input type="tel"
+                                            class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+                                            required placeholder="(555) 000-0000">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium mb-1">Zip Code</label>
+                                        <input type="text"
+                                            class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+                                            required placeholder="12345">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-1">When was your last cleaning?</label>
+                                    <select
+                                        class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                        <option>Less than 3 months ago</option>
+                                        <option>3-6 months ago</option>
+                                        <option>Over 6 months ago</option>
+                                        <option>Not sure</option>
+                                    </select>
+                                </div>
+                                <button type="submit"
+                                    class="w-full bg-secondary hover:bg-slate-900 text-white font-bold py-3 rounded-lg shadow-lg transition">
+                                    Submit Request <i class="fas fa-arrow-right ml-2"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Reviews Section -->
+            <div class="py-16 bg-slate-50 border-b border-slate-200">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-12 reveal">
+                        <div class="flex justify-center items-center space-x-2 mb-4">
+                            <i class="fab fa-google text-2xl" style="color: #4285F4;"></i>
+                            <div class="flex text-yellow-400 text-xl">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="font-bold text-secondary text-lg ml-2">5.0</span>
+                        </div>
+                        <h2 class="font-heading text-3xl font-bold text-secondary mb-4">Trusted by Local Businesses</h2>
+                        <p class="text-slate-600">Read our latest reviews from satisfied restaurant owners and kitchen
+                            managers.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-8 reveal">
+                        <!-- Review Card 1 -->
+                        <div
+                            class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="flex items-center">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-lg mr-3">
+                                        M</div>
+                                    <div>
+                                        <h4 class="font-bold text-secondary text-sm">Mike's Grill</h4>
+                                        <p class="text-xs text-slate-500">2 weeks ago</p>
+                                    </div>
+                                </div>
+                                <i class="fab fa-google text-slate-300"></i>
+                            </div>
+                            <div class="flex text-yellow-400 text-sm mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed">"Andaman Hood Cleaning is incredibly
+                                professional. They showed up on time, did a thorough job down to the bare metal, and
+                                provided all the before/after photos we needed for our insurance. Highly recommended!"
+                            </p>
+                        </div>
+                        <!-- Review Card 2 -->
+                        <div
+                            class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="flex items-center">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center font-bold text-lg mr-3">
+                                        T</div>
+                                    <div>
+                                        <h4 class="font-bold text-secondary text-sm">The Rusty Spoon</h4>
+                                        <p class="text-xs text-slate-500">1 month ago</p>
+                                    </div>
+                                </div>
+                                <i class="fab fa-google text-slate-300"></i>
+                            </div>
+                            <div class="flex text-yellow-400 text-sm mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed">"We switched to Andaman after our last
+                                company failed an inspection. The difference is night and day. They cleaned areas the
+                                other guys never even touched. Great communication too."</p>
+                        </div>
+                        <!-- Review Card 3 -->
+                        <div
+                            class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="flex items-center">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-lg mr-3">
+                                        S</div>
+                                    <div>
+                                        <h4 class="font-bold text-secondary text-sm">Sarah J.</h4>
+                                        <p class="text-xs text-slate-500">2 months ago</p>
+                                    </div>
+                                </div>
+                                <i class="fab fa-google text-slate-300"></i>
+                            </div>
+                            <div class="flex text-yellow-400 text-sm mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed">"Fast, efficient, and clean. They left our
+                                kitchen spotless after the hood cleaning. The certificate was provided immediately. Will
+                                definitely use them for our quarterly cleanings."</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-10 reveal">
+                        <a href="#"
+                            class="inline-flex items-center bg-white border border-slate-200 text-secondary font-bold px-6 py-3 rounded-full shadow-sm hover:border-primary hover:text-primary transition">
+                            Read more reviews on Google <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Before & After Comparison Section -->
+            <div class="py-20 bg-white">
+                <div class="container mx-auto px-4">
+                    <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                        <h2 class="font-heading text-3xl md:text-4xl font-bold text-secondary mb-4">The Andaman
+                            Difference: <span class="text-primary">Before & After</span></h2>
+                        <p class="text-slate-600">We don't just clean the visible parts. We deep-clean the entire
+                            exhaust system from the hood to the roof fan, down to bare metal. Slide to see the
+                            transformation.</p>
+                    </div>
+
+                    <div class="reveal">
+                        <!-- BA Slider -->
+                        <div
+                            class="ba-slider relative w-full max-w-4xl mx-auto h-64 md:h-[500px] overflow-hidden rounded-2xl shadow-2xl bg-slate-200">
+                            <!-- "After" Image (Clean) -->
+                            <img src="https://images.unsplash.com/photo-1556910096-6f5e72db6803?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="absolute inset-0 w-full h-full object-cover" alt="Clean Hood">
+                            <div
+                                class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded text-sm font-bold shadow z-0">
+                                AFTER</div>
+
+                            <!-- "Before" Image (Dirty/Greasy - Simulated with a darker industrial image) -->
+                            <div class="ba-before" id="baBeforeHome">
+                                <img src="https://images.unsplash.com/photo-1736433622548-4adbbc1c2cf2?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    class="absolute inset-0 w-full h-full object-cover" alt="Dirty Hood">
+                                <div
+                                    class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded text-sm font-bold shadow">
+                                    BEFORE</div>
+                            </div>
+
+                            <div class="ba-slider-line" id="baLineHome"></div>
+
+                            <input type="range" min="0" max="100" value="50" class="ba-range" id="baRangeHome">
+                            <div class="ba-handle" id="baHandleHome">
+                                <i class="fas fa-arrows-alt-h"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features/Services Snippet -->
+            <div class="py-20 bg-primaryLight relative">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16 reveal">
+                        <h2 class="font-heading text-3xl md:text-4xl font-bold text-secondary mb-4">Comprehensive Fire
+                            Prevention</h2>
+                        <p class="text-slate-600 max-w-2xl mx-auto">We provide a complete suite of services to ensure
+                            your commercial kitchen passes inspections and operates safely.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Card 1 -->
+                        <div
+                            class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition duration-300 reveal text-center">
+                            <div
+                                class="w-16 h-16 bg-primaryLight rounded-full flex items-center justify-center mx-auto mb-6 text-primary text-2xl">
+                                <i class="fas fa-тяg"></i> <!-- Fallback icon -->
+                                <i class="fas fa-fan"></i>
+                            </div>
+                            <h3 class="font-bold text-xl mb-3 text-secondary">Exhaust Fan Cleaning</h3>
+                            <p class="text-slate-600 mb-4 text-sm">Thorough removal of grease from fan blades, housing,
+                                and ductwork extending to the roof.</p>
+                            <a href="#" onclick="navigate('services')"
+                                class="text-primary font-semibold hover:underline">Learn More &rarr;</a>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition duration-300 reveal text-center"
+                            style="transition-delay: 100ms;">
+                            <div
+                                class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6 text-secondary text-2xl">
+                                <i class="fas fa-fire-extinguisher"></i>
+                            </div>
+                            <h3 class="font-bold text-xl mb-3 text-secondary">Hood System Degreasing</h3>
+                            <p class="text-slate-600 mb-4 text-sm">We scrape, wash, and polish your hoods down to bare
+                                metal in compliance with NFPA 96 codes.</p>
+                            <a href="#" onclick="navigate('services')"
+                                class="text-primary font-semibold hover:underline">Learn More &rarr;</a>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition duration-300 reveal text-center"
+                            style="transition-delay: 200ms;">
+                            <div
+                                class="w-16 h-16 bg-primaryLight rounded-full flex items-center justify-center mx-auto mb-6 text-primary text-2xl">
+                                <i class="fas fa-filter"></i>
+                            </div>
+                            <h3 class="font-bold text-xl mb-3 text-secondary">Filter Replacement</h3>
+                            <p class="text-slate-600 mb-4 text-sm">Supply and installation of high-quality baffle
+                                filters to ensure optimal airflow and grease capture.</p>
+                            <a href="#" onclick="navigate('services')"
+                                class="text-primary font-semibold hover:underline">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick CTA -->
+            <div class="bg-secondary text-white py-16">
+                <div class="container mx-auto px-4 text-center reveal">
+                    <h2 class="font-heading text-3xl font-bold mb-6">Don't Wait for an Inspection Failure or Fire</h2>
+                    <p class="text-slate-300 mb-8 max-w-2xl mx-auto">Get your free, no-obligation estimate today. We
+                        work around your schedule, offering overnight and early morning services to avoid disrupting
+                        your business.</p>
+                    <button onclick="toggleModal('quoteModal')"
+                        class="bg-primary hover:bg-white hover:text-primary text-white px-8 py-4 rounded-full font-bold text-lg transition duration-300">
+                        Schedule Your Cleaning Now
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ABOUT US ================= -->
+        <section id="page-about" class="page-view">
+            <div class="bg-secondary py-16 text-center text-white">
+                <h1 class="font-heading text-4xl font-bold mb-4">About Andaman Hood Cleaning</h1>
+                <p class="text-slate-300 max-w-2xl mx-auto px-4">Dedicated to safety, precision, and the highest
+                    standards of commercial kitchen maintenance.</p>
+            </div>
+
+            <div class="container mx-auto px-4 py-20">
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+                    <div class="reveal">
+                        <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&q=80"
+                            alt="Team at work" class="rounded-2xl shadow-xl">
+                    </div>
+                    <div class="reveal">
+                        <h2 class="text-primary font-bold tracking-wider uppercase text-sm mb-2">Our Story</h2>
+                        <h3 class="font-heading text-3xl font-bold text-secondary mb-6">Setting the Standard in Fire
+                            Prevention</h3>
+                        <p class="text-slate-600 mb-4">At Andaman Hood Cleaning, we understand that a clean exhaust
+                            system is the heart of a safe commercial kitchen. Founded on the principles of integrity and
+                            meticulous attention to detail, we have grown into the region's most trusted hood cleaning
+                            service.</p>
+                        <p class="text-slate-600 mb-6">We don't just wipe down the visible canopy. Our certified
+                            technicians go deep into the ductwork and up to the roof fan, ensuring every speck of grease
+                            is removed down to the bare metal, strictly adhering to NFPA 96 guidelines.</p>
+
+                        <div class="bg-primaryLight p-6 rounded-xl border-l-4 border-primary">
+                            <h4 class="font-bold text-secondary mb-2"><i
+                                    class="fas fa-certificate text-primary mr-2"></i> NFPA 96 Certified</h4>
+                            <p class="text-sm text-slate-600">Our entire team undergoes rigorous training to meet and
+                                exceed national fire safety codes, keeping you compliant and your insurance valid.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Values -->
+                <div class="text-center reveal mb-12">
+                    <h2 class="font-heading text-3xl font-bold text-secondary">Why Choose Andaman?</h2>
+                </div>
+                <div class="grid md:grid-cols-4 gap-6 reveal">
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <i class="fas fa-camera text-3xl text-primary mb-4"></i>
+                        <h4 class="font-bold mb-2">Photo Documentation</h4>
+                        <p class="text-sm text-slate-500">We provide before and after photos of every job, including the
+                            hard-to-reach ducts.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <i class="fas fa-clock text-3xl text-primary mb-4"></i>
+                        <h4 class="font-bold mb-2">Flexible Scheduling</h4>
+                        <p class="text-sm text-slate-500">We work overnight or during your off-hours so your kitchen
+                            operations are never interrupted.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <i class="fas fa-shield-alt text-3xl text-primary mb-4"></i>
+                        <h4 class="font-bold mb-2">Fully Insured & Bonded</h4>
+                        <p class="text-sm text-slate-500">Complete peace of mind knowing you are fully protected while
+                            we are on your premises.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <i class="fas fa-file-signature text-3xl text-primary mb-4"></i>
+                        <h4 class="font-bold mb-2">Compliance Reporting</h4>
+                        <p class="text-sm text-slate-500">We affix a certification sticker to your hood and provide
+                            reports for your health inspector.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SERVICES & INDUSTRIES ================= -->
+        <section id="page-services" class="page-view">
+            <div class="bg-secondary py-16 text-center text-white">
+                <h1 class="font-heading text-4xl font-bold mb-4">Our Services & Industries Served</h1>
+                <p class="text-slate-300 max-w-2xl mx-auto px-4">Comprehensive cleaning solutions tailored for every
+                    type of commercial kitchen.</p>
+            </div>
+
+            <div class="container mx-auto px-4 py-20">
+                <!-- Services -->
+                <div class="grid md:grid-cols-2 gap-16 mb-24">
+                    <div class="reveal">
+                        <h2 class="font-heading text-3xl font-bold text-secondary mb-6">Specialized Cleaning Services
+                        </h2>
+                        <div class="space-y-8">
+                            <div class="flex">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div
+                                        class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                                        <i class="fas fa-fire"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-xl font-bold text-secondary mb-2">Commercial Hood Cleaning</h3>
+                                    <p class="text-slate-600">Complete removal of vaporized grease accumulation in the
+                                        hood canopy. We use eco-friendly, industrial-strength degreasers and hot water
+                                        pressure washing to achieve bare metal results.</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div
+                                        class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                                        <i class="fas fa-fan"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-xl font-bold text-secondary mb-2">Exhaust Fan & Duct Cleaning</h3>
+                                    <p class="text-slate-600">The most dangerous grease hides out of sight. We access
+                                        vertical and horizontal ductwork and thoroughly clean the rooftop exhaust fan
+                                        bowl and blades to prevent catastrophic roof fires.</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div
+                                        class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                                        <i class="fas fa-tools"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-xl font-bold text-secondary mb-2">Hinge Kit Installation</h3>
+                                    <p class="text-slate-600">NFPA 96 requires exhaust fans to be hinged. We install
+                                        heavy-duty hinge kits, allowing fans to be tipped back safely for cleaning
+                                        without damaging the roof or the fan wiring.</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div
+                                        class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                                        <i class="fas fa-tint"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-xl font-bold text-secondary mb-2">Grease Containment Systems</h3>
+                                    <p class="text-slate-600">Protect your roof from costly grease damage and run-off.
+                                        We supply and service rooftop grease catchers and absorbent pads.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal">
+                        <img src="https://images.unsplash.com/photo-1556910096-6f5e72db6803?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Clean Hood System" class="rounded-2xl shadow-xl h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Industries Served -->
+                <div class="bg-slate-100 rounded-3xl p-10 md:p-16 reveal">
+                    <div class="text-center mb-12">
+                        <h2 class="font-heading text-3xl font-bold text-secondary mb-4">Industries We Serve</h2>
+                        <p class="text-slate-600">If you have a commercial kitchen, we have the expertise to keep it
+                            safe.</p>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="bg-white p-6 rounded-xl shadow text-center group hover:bg-primary transition">
+                            <i
+                                class="fas fa-utensils text-4xl text-slate-300 group-hover:text-white mb-4 transition"></i>
+                            <h4 class="font-bold text-secondary group-hover:text-white transition">Restaurants</h4>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow text-center group hover:bg-primary transition">
+                            <i
+                                class="fas fa-hospital text-4xl text-slate-300 group-hover:text-white mb-4 transition"></i>
+                            <h4 class="font-bold text-secondary group-hover:text-white transition">Hospitals</h4>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow text-center group hover:bg-primary transition">
+                            <i class="fas fa-school text-4xl text-slate-300 group-hover:text-white mb-4 transition"></i>
+                            <h4 class="font-bold text-secondary group-hover:text-white transition">Schools &
+                                Universities</h4>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow text-center group hover:bg-primary transition">
+                            <i class="fas fa-hotel text-4xl text-slate-300 group-hover:text-white mb-4 transition"></i>
+                            <h4 class="font-bold text-secondary group-hover:text-white transition">Hotels & Resorts</h4>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow text-center group hover:bg-primary transition">
+                            <i class="fas fa-church text-4xl text-slate-300 group-hover:text-white mb-4 transition"></i>
+                            <h4 class="font-bold text-secondary group-hover:text-white transition">Churches</h4>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow text-center group hover:bg-primary transition">
+                            <i
+                                class="fas fa-shopping-cart text-4xl text-slate-300 group-hover:text-white mb-4 transition"></i>
+                            <h4 class="font-bold text-secondary group-hover:text-white transition">Supermarkets</h4>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow text-center group hover:bg-primary transition">
+                            <i
+                                class="fas fa-glass-cheers text-4xl text-slate-300 group-hover:text-white mb-4 transition"></i>
+                            <h4 class="font-bold text-secondary group-hover:text-white transition">Bars & Clubs</h4>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow text-center group hover:bg-primary transition">
+                            <i
+                                class="fas fa-industry text-4xl text-slate-300 group-hover:text-white mb-4 transition"></i>
+                            <h4 class="font-bold text-secondary group-hover:text-white transition">Industrial Facilities
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SERVICE AREAS ================= -->
+        <section id="page-areas" class="page-view">
+            <div class="bg-secondary py-16 text-center text-white">
+                <h1 class="font-heading text-4xl font-bold mb-4">Our Service Areas</h1>
+                <p class="text-slate-300 max-w-2xl mx-auto px-4">Local expertise, widespread coverage. See where Andaman
+                    Hood Cleaning operates.</p>
+            </div>
+
+            <div class="container mx-auto px-4 py-20">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="reveal">
+                        <h2 class="font-heading text-3xl font-bold text-secondary mb-6">Proudly Serving Your Region</h2>
+                        <p class="text-slate-600 mb-6">We provide rapid response and scheduled maintenance across a wide
+                            geographic footprint. Whether you have a single location or a multi-unit franchise, our
+                            fleets are ready to be dispatched.</p>
+
+                        <div class="bg-white shadow-lg rounded-xl border border-slate-100 p-6 mb-6">
+                            <h3 class="font-bold text-xl text-primary mb-4 border-b pb-2">Primary Counties Served</h3>
+                            <ul class="grid grid-cols-2 gap-2 text-slate-600">
+                                <li><i class="fas fa-map-marker-alt text-primary/50 mr-2"></i> Metro County</li>
+                                <li><i class="fas fa-map-marker-alt text-primary/50 mr-2"></i> North County</li>
+                                <li><i class="fas fa-map-marker-alt text-primary/50 mr-2"></i> South Bay</li>
+                                <li><i class="fas fa-map-marker-alt text-primary/50 mr-2"></i> East Valley</li>
+                                <li><i class="fas fa-map-marker-alt text-primary/50 mr-2"></i> Westside</li>
+                                <li><i class="fas fa-map-marker-alt text-primary/50 mr-2"></i> Central District</li>
+                            </ul>
+                        </div>
+                        <p class="text-sm text-slate-500 italic">Don't see your area? Contact us. We frequently travel
+                            outside our primary zones for large commercial contracts.</p>
+                    </div>
+
+                    <!-- Fake Map Placeholder -->
+                    <div
+                        class="bg-slate-200 h-96 rounded-2xl flex items-center justify-center reveal shadow-inner relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80"
+                            alt="Map" class="absolute inset-0 w-full h-full object-cover opacity-50 grayscale">
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-map-pin text-5xl text-primary mb-4 drop-shadow-md float-anim"></i>
+                            <h3 class="text-2xl font-bold text-secondary drop-shadow-md">Coverage Map</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FAQs ================= -->
+        <section id="page-faq" class="page-view">
+            <div class="bg-secondary py-16 text-center text-white">
+                <h1 class="font-heading text-4xl font-bold mb-4">Frequently Asked Questions</h1>
+                <p class="text-slate-300 max-w-2xl mx-auto px-4">Got questions about hood cleaning and compliance? We
+                    have answers.</p>
+            </div>
+
+            <div class="container mx-auto px-4 py-20 max-w-4xl">
+                <div class="space-y-4 reveal">
+                    <!-- FAQ Item 1 -->
+                    <div class="border border-slate-200 rounded-lg bg-white overflow-hidden">
+                        <button
+                            class="w-full text-left px-6 py-4 font-bold text-secondary flex justify-between items-center focus:outline-none"
+                            onclick="toggleFaq(this)">
+                            How often does my hood need to be cleaned?
+                            <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                        </button>
+                        <div class="px-6 pb-4 hidden text-slate-600 border-t border-slate-100 pt-4">
+                            Per NFPA 96 standards, frequency depends on cooking volume and type:<br><br>
+                            • <strong>Monthly:</strong> Systems serving solid fuel cooking operations (wood,
+                            charcoal).<br>
+                            • <strong>Quarterly:</strong> High-volume cooking operations (24-hour diners, fast food,
+                            charbroiling).<br>
+                            • <strong>Semi-Annually:</strong> Moderate-volume cooking operations.<br>
+                            • <strong>Annually:</strong> Low-volume operations (churches, day camps, seasonal
+                            businesses).
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="border border-slate-200 rounded-lg bg-white overflow-hidden">
+                        <button
+                            class="w-full text-left px-6 py-4 font-bold text-secondary flex justify-between items-center focus:outline-none"
+                            onclick="toggleFaq(this)">
+                            Why is hood cleaning important?
+                            <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                        </button>
+                        <div class="px-6 pb-4 hidden text-slate-600 border-t border-slate-100 pt-4">
+                            The primary reason is fire prevention. Grease buildup inside the hood, ducts, and fans is
+                            highly combustible. A flare-up on the stove can ignite this grease, causing a fire to spread
+                            rapidly through the ductwork to the roof. Regular cleaning also improves ventilation,
+                            reduces odors, and ensures compliance with health inspectors and insurance policies.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="border border-slate-200 rounded-lg bg-white overflow-hidden">
+                        <button
+                            class="w-full text-left px-6 py-4 font-bold text-secondary flex justify-between items-center focus:outline-none"
+                            onclick="toggleFaq(this)">
+                            Will you make a mess in my kitchen?
+                            <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                        </button>
+                        <div class="px-6 pb-4 hidden text-slate-600 border-t border-slate-100 pt-4">
+                            Absolutely not. We take extreme care to protect your kitchen. We wrap the hood with plastic
+                            sheeting, funneling the grease and water directly into designated containers. We cover all
+                            appliances and prep areas, and we mop the floor before we leave. We leave your kitchen
+                            cleaner than we found it.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="border border-slate-200 rounded-lg bg-white overflow-hidden">
+                        <button
+                            class="w-full text-left px-6 py-4 font-bold text-secondary flex justify-between items-center focus:outline-none"
+                            onclick="toggleFaq(this)">
+                            Are you certified and insured?
+                            <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                        </button>
+                        <div class="px-6 pb-4 hidden text-slate-600 border-t border-slate-100 pt-4">
+                            Yes. All our technicians are thoroughly trained and certified to NFPA 96 standards. Andaman
+                            Hood Cleaning is fully licensed, bonded, and carries extensive liability and workers'
+                            compensation insurance.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="border border-slate-200 rounded-lg bg-white overflow-hidden">
+                        <button
+                            class="w-full text-left px-6 py-4 font-bold text-secondary flex justify-between items-center focus:outline-none"
+                            onclick="toggleFaq(this)">
+                            How long does a typical cleaning take?
+                            <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                        </button>
+                        <div class="px-6 pb-4 hidden text-slate-600 border-t border-slate-100 pt-4">
+                            A standard cleaning for a single hood system usually takes between 3 to 5 hours. However,
+                            time can vary based on the size of the system, length of ductwork, and the amount of grease
+                            accumulation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12 reveal">
+                    <p class="text-slate-600 mb-4">Still have questions?</p>
+                    <button onclick="navigate('contact')"
+                        class="bg-primary text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-primaryDark transition">Contact
+                        Us Directly</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT US ================= -->
+        <section id="page-contact" class="page-view">
+            <div class="bg-secondary py-16 text-center text-white">
+                <h1 class="font-heading text-4xl font-bold mb-4">Contact Us</h1>
+                <p class="text-slate-300 max-w-2xl mx-auto px-4">Reach out for a free quote, to schedule a service, or
+                    for emergency assistance.</p>
+            </div>
+
+            <div class="container mx-auto px-4 py-20">
+                <div class="grid md:grid-cols-2 gap-16">
+                    <div class="reveal">
+                        <h2 class="font-heading text-3xl font-bold text-secondary mb-6">Get In Touch</h2>
+                        <p class="text-slate-600 mb-8">Ready to secure your kitchen? Fill out the form, and a member of
+                            the Andaman team will contact you promptly to arrange an on-site inspection.</p>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 bg-primaryLight text-primary rounded-full flex items-center justify-center text-xl shrink-0">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="ml-4 pt-1">
+                                    <h4 class="font-bold text-secondary">Headquarters</h4>
+                                    <p class="text-slate-600">123 Clean Street, Suite 400<br>Metropolis, ST 12345</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 bg-primaryLight text-primary rounded-full flex items-center justify-center text-xl shrink-0">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="ml-4 pt-1">
+                                    <h4 class="font-bold text-secondary">Phone (24/7)</h4>
+                                    <p class="text-slate-600">1-800-555-HOOD (4663)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 bg-primaryLight text-primary rounded-full flex items-center justify-center text-xl shrink-0">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="ml-4 pt-1">
+                                    <h4 class="font-bold text-secondary">Email</h4>
+                                    <p class="text-slate-600">info@andamanhoodcleaning.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl border border-slate-100 reveal">
+                        <form onsubmit="event.preventDefault(); alert('Message Sent! We will get back to you soon.');">
+                            <div class="grid grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1">First Name</label>
+                                    <input type="text"
+                                        class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"
+                                        required>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1">Last Name</label>
+                                    <input type="text"
+                                        class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Business Name</label>
+                                <input type="text"
+                                    class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"
+                                    required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
+                                <input type="email"
+                                    class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"
+                                    required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Phone Number</label>
+                                <input type="tel"
+                                    class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"
+                                    required>
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-slate-700 mb-1">How can we help?</label>
+                                <textarea rows="4"
+                                    class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"
+                                    required></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-primary hover:bg-primaryDark text-white font-bold py-3 rounded-lg shadow-lg transition">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= BLOG LIST ================= -->
+        <section id="page-blog" class="page-view">
+            <div class="bg-secondary py-16 text-center text-white">
+                <h1 class="font-heading text-4xl font-bold mb-4">Fire Safety & Cleaning Blog</h1>
+                <p class="text-slate-300 max-w-2xl mx-auto px-4">Insights, tips, and compliance updates for restaurant
+                    owners.</p>
+            </div>
+
+            <div class="container mx-auto px-4 py-20">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Blog Card 1 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden reveal flex flex-col cursor-pointer group"
+                        onclick="navigate('post')">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80"
+                                alt="Blog 1"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <span class="text-xs font-bold text-primary uppercase mb-2">Compliance</span>
+                            <h3
+                                class="font-heading text-xl font-bold text-secondary mb-3 group-hover:text-primary transition">
+                                The Ultimate NFPA 96 Compliance Checklist</h3>
+                            <p class="text-slate-600 text-sm mb-4 flex-grow">Ensure your commercial kitchen meets all
+                                fire safety regulations with our comprehensive, easy-to-follow NFPA 96 checklist.</p>
+                            <span class="text-primary font-semibold text-sm">Read Article &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 2 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden reveal flex flex-col cursor-pointer group"
+                        onclick="navigate('post')" style="transition-delay: 100ms;">
+                        <div class="h-48 overflow-hidden bg-slate-200">
+                            <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&q=80"
+                                alt="Blog 2"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <span class="text-xs font-bold text-primary uppercase mb-2">Safety</span>
+                            <h3
+                                class="font-heading text-xl font-bold text-secondary mb-3 group-hover:text-primary transition">
+                                Top 5 Fire Hazards in Commercial Kitchens</h3>
+                            <p class="text-slate-600 text-sm mb-4 flex-grow">Learn what the most common causes of
+                                restaurant fires are, and the preventative steps you can take today to avoid disaster.
+                            </p>
+                            <span class="text-primary font-semibold text-sm">Read Article &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 3 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden reveal flex flex-col cursor-pointer group"
+                        onclick="navigate('post')" style="transition-delay: 200ms;">
+                        <div class="h-48 overflow-hidden bg-slate-200">
+                            <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80"
+                                alt="Blog 3"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <span class="text-xs font-bold text-primary uppercase mb-2">Maintenance</span>
+                            <h3
+                                class="font-heading text-xl font-bold text-secondary mb-3 group-hover:text-primary transition">
+                                Why You Shouldn't Clean the Hood Yourself</h3>
+                            <p class="text-slate-600 text-sm mb-4 flex-grow">Thinking of having your prep staff wipe
+                                down the hood? Here is why DIY hood cleaning is dangerous and legally risky.</p>
+                            <span class="text-primary font-semibold text-sm">Read Article &rarr;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= BLOG DETAIL (Mock Article) ================= -->
+        <section id="page-post" class="page-view">
+            <div class="container mx-auto px-4 py-16 max-w-4xl">
+                <button onclick="navigate('blog')" class="text-primary font-semibold mb-8 hover:underline"><i
+                        class="fas fa-arrow-left mr-2"></i> Back to Blog</button>
+
+                <div class="mb-8">
+                    <span class="text-sm font-bold text-primary uppercase mb-2 block">Compliance</span>
+                    <h1 class="font-heading text-4xl md:text-5xl font-bold text-secondary mb-4">The Ultimate NFPA 96
+                        Compliance Checklist for Restaurants</h1>
+                    <div class="flex items-center text-slate-500 text-sm">
+                        <span><i class="far fa-calendar-alt mr-2"></i> Oct 15, 2023</span>
+                        <span class="mx-3">•</span>
+                        <span><i class="far fa-user mr-2"></i> Admin</span>
+                    </div>
+                </div>
+
+                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80"
+                    alt="Blog Hero" class="w-full h-96 object-cover rounded-2xl mb-10 shadow-lg">
+
+                <div class="prose prose-lg max-w-none text-slate-700 leading-relaxed space-y-6">
+                    <p>Running a commercial kitchen comes with immense responsibility, and fire safety should always be
+                        at the top of the list. The National Fire Protection Association (NFPA) established the
+                        <strong>NFPA 96</strong> standards to outline the minimum fire safety requirements related to
+                        the design, installation, operation, inspection, and maintenance of all public and private
+                        commercial cooking operations.
+                    </p>
+
+                    <h2 class="text-2xl font-bold text-secondary mt-8 mb-4">Why NFPA 96 Matters</h2>
+                    <p>Failure to comply with NFPA 96 isn't just a matter of failing a local health inspection. If a
+                        fire breaks out in your kitchen and investigators determine that your exhaust system was not
+                        maintained to NFPA 96 standards, your insurance company can deny your claim entirely. This
+                        leaves you personally liable for damages.</p>
+
+                    <h2 class="text-2xl font-bold text-secondary mt-8 mb-4">Your Quick Checklist</h2>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Schedule Regular Professional Cleanings:</strong> Based on your cooking volume
+                            (Monthly, Quarterly, Semi-Annually, or Annually). The cleaners must provide a certificate of
+                            performance.</li>
+                        <li><strong>Maintain Baffle Filters:</strong> Check filters daily. They should be cleaned
+                            regularly by staff to ensure proper airflow, but the deep ductwork must be left to pros.
+                            Never run the system with missing filters.</li>
+                        <li><strong>Ensure Access Panels are Present:</strong> NFPA 96 requires access panels on
+                            ductwork every 12 feet and at every change of direction to allow for thorough cleaning and
+                            inspection.</li>
+                        <li><strong>Hinge Your Roof Fan:</strong> The exhaust fan must be hinged so cleaners can tip it
+                            back to clean the fan blades and the vertical duct drop without damaging the electrical
+                            wiring or the roof.</li>
+                        <li><strong>Check Grease Catchers:</strong> The rooftop grease containment system should be
+                            emptied or have its pads replaced regularly to prevent grease from destroying the roof
+                            material (which is a massive fire hazard).</li>
+                    </ul>
+
+                    <div class="bg-primaryLight p-8 rounded-xl my-8 border-l-4 border-primary">
+                        <h3 class="font-bold text-xl text-secondary mb-2">Need an Inspection?</h3>
+                        <p class="mb-4">Not sure if your kitchen is up to code? The experts at Andaman Hood Cleaning can
+                            perform a thorough assessment of your system.</p>
+                        <button onclick="toggleModal('quoteModal')"
+                            class="bg-primary text-white px-6 py-2 rounded-lg font-bold">Request Assessment</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PRIVACY & TERMS ================= -->
+        <section id="page-legal" class="page-view">
+            <div class="container mx-auto px-4 py-16 max-w-4xl">
+                <h1 class="font-heading text-4xl font-bold text-secondary mb-8">Privacy Policy & Terms of Service</h1>
+
+                <div class="prose prose-lg max-w-none text-slate-700 space-y-6">
+                    <h2 class="text-2xl font-bold text-secondary">1. Introduction</h2>
+                    <p>Welcome to Andaman Hood Cleaning. We respect your privacy and want to protect your personal
+                        information. This policy explains how we collect, use, and safeguard your data when you visit
+                        our website or use our services.</p>
+
+                    <h2 class="text-2xl font-bold text-secondary">2. Information Collection</h2>
+                    <p>We collect information you provide directly to us, such as when you request a quote, fill out a
+                        form, or communicate with us. This may include your name, email address, phone number, business
+                        name, and address.</p>
+
+                    <h2 class="text-2xl font-bold text-secondary">3. Use of Information</h2>
+                    <p>We use the information we collect to provide, maintain, and improve our services, communicate
+                        with you, process your requests, and send you important notices.</p>
+
+                    <h2 class="text-2xl font-bold text-secondary">4. Terms of Service</h2>
+                    <p>By scheduling a cleaning service with Andaman Hood Cleaning, you agree to provide our technicians
+                        with safe access to the premises and the exhaust system. We guarantee our work will be performed
+                        in accordance with NFPA 96 standards to the best of our ability based on the accessibility of
+                        your specific ductwork design.</p>
+
+                    <p class="text-sm text-slate-500 mt-8">Last Updated: October 2023</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-slate-300 pt-16 pb-8 border-t-4 border-primary relative">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="#" onclick="navigate('home')" class="flex items-center space-x-2 mb-6">
+                        <div class="w-8 h-8 bg-primary text-white rounded flex items-center justify-center text-sm">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <span class="font-heading font-bold text-xl text-white">Andaman<span
+                                class="text-primary">Hood</span></span>
+                    </a>
+                    <p class="text-sm mb-6">The premier provider of commercial kitchen exhaust cleaning, protecting
+                        businesses from fire hazards with certified, thorough service.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary text-white transition"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary text-white transition"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary text-white transition"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" onclick="navigate('home')" class="hover:text-primary transition">Home</a></li>
+                        <li><a href="#" onclick="navigate('about')" class="hover:text-primary transition">About Us</a>
+                        </li>
+                        <li><a href="#" onclick="navigate('services')"
+                                class="hover:text-primary transition">Services</a></li>
+                        <li><a href="#" onclick="navigate('faq')" class="hover:text-primary transition">FAQs</a></li>
+                        <li><a href="#" onclick="navigate('blog')" class="hover:text-primary transition">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" onclick="navigate('services')" class="hover:text-primary transition">Hood
+                                Cleaning</a></li>
+                        <li><a href="#" onclick="navigate('services')" class="hover:text-primary transition">Exhaust Fan
+                                Maintenance</a></li>
+                        <li><a href="#" onclick="navigate('services')" class="hover:text-primary transition">Hinge Kit
+                                Installation</a></li>
+                        <li><a href="#" onclick="navigate('services')" class="hover:text-primary transition">Filter
+                                Replacement</a></li>
+                        <li><a href="#" onclick="navigate('services')" class="hover:text-primary transition">Grease
+                                Containment</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Contact Info</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mt-1 mr-3"></i>
+                            <span>123 Clean Street, Suite 400<br>Metropolis, ST 12345</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-primary mr-3"></i>
+                            <span>1-800-555-HOOD</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-primary mr-3"></i>
+                            <span>info@andamanhood.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
+                <p>&copy; <span id="year"></span> Andaman Hood Cleaning. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" onclick="navigate('legal')" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" onclick="navigate('legal')" class="hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button (Mobile Quote) -->
+    <button onclick="toggleModal('quoteModal')"
+        class="fixed bottom-6 right-6 lg:hidden bg-primary text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl z-40 float-anim">
+        <i class="fas fa-clipboard-list"></i>
+    </button>
+
+    <!-- Global Modal for Lead Capture -->
+    <div id="quoteModal"
+        class="fixed inset-0 bg-slate-900/70 z-[100] hidden flex items-center justify-center p-4 backdrop-blur-sm transition-opacity duration-300 opacity-0">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden transform scale-95 transition-transform duration-300"
+            id="quoteModalContent">
+            <div class="bg-primary p-6 text-white relative">
+                <button onclick="toggleModal('quoteModal')"
+                    class="absolute top-4 right-4 text-white hover:text-slate-200">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+                <h3 class="font-heading text-2xl font-bold">Request a Free Quote</h3>
+                <p class="text-primaryLight text-sm mt-1">Fill out the details and we'll be in touch ASAP.</p>
+            </div>
+            <div class="p-6">
+                <form
+                    onsubmit="event.preventDefault(); alert('Quote Request Submitted! We will contact you soon.'); toggleModal('quoteModal');">
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Name / Business Name</label>
+                            <input type="text"
+                                class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"
+                                required>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Phone</label>
+                                <input type="tel"
+                                    class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"
+                                    required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Zip Code</label>
+                                <input type="text"
+                                    class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"
+                                    required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Service Needed</label>
+                            <select
+                                class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
+                                <option>Full System Cleaning</option>
+                                <option>Exhaust Fan Maintenance</option>
+                                <option>Filter Replacement</option>
+                                <option>Emergency Service</option>
+                            </select>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-secondary hover:bg-slate-900 text-white font-bold py-3 rounded-lg shadow-lg transition mt-4">
+                            Get My Quote
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Application Logic -->
+    <script>
+        // Set Year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Single Page Navigation Logic
+        function navigate(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-view');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Show target page
+            const target = document.getElementById('page-' + pageId);
+            if (target) {
+                target.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                // Re-trigger scroll animations for new view
+                setTimeout(initScrollAnimations, 100);
+            }
+
+            // Update Nav Active State (optional UI enhancement)
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('text-primary', 'font-bold');
+                if (link.textContent.toLowerCase().includes(pageId) ||
+                    (pageId === 'home' && link.textContent === 'Home') ||
+                    (pageId === 'post' && link.textContent === 'Blog') ||
+                    (pageId === 'legal' && link.textContent === 'Home') // default
+                ) {
+                    // Add active class logic if desired
+                }
+            });
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Modal Logic
+        function toggleModal(modalId) {
+            const modal = document.getElementById(modalId);
+            const content = document.getElementById(modalId + 'Content');
+
+            if (modal.classList.contains('hidden')) {
+                // Open
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    content.classList.remove('scale-95');
+                }, 10);
+            } else {
+                // Close
+                modal.classList.add('opacity-0');
+                content.classList.add('scale-95');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300);
+            }
+        }
+
+        // FAQ Accordion
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+                button.classList.add('text-primary');
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+                button.classList.remove('text-primary');
+            }
+        }
+
+        // Intersection Observer for Scroll Animations
+        function initScrollAnimations() {
+            const reveals = document.querySelectorAll('.page-view.active .reveal');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Optional: Stop observing once animated
+                        // observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            reveals.forEach(reveal => {
+                reveal.classList.remove('active'); // reset
+                observer.observe(reveal);
+            });
+        }
+
+        // Before & After Slider Logic
+        function initBaSlider() {
+            const sliders = document.querySelectorAll('.ba-slider');
+
+            sliders.forEach(sliderContainer => {
+                const slider = sliderContainer.querySelector('.ba-range');
+                const beforeImage = sliderContainer.querySelector('.ba-before');
+                const handle = sliderContainer.querySelector('.ba-handle');
+                const line = sliderContainer.querySelector('.ba-slider-line');
+
+                if (slider && beforeImage && handle && line) {
+                    slider.addEventListener('input', (e) => {
+                        const value = e.target.value;
+                        beforeImage.style.clipPath = `polygon(0 0, ${value}% 0, ${value}% 100%, 0 100%)`;
+                        beforeImage.style.webkitClipPath = `polygon(0 0, ${value}% 0, ${value}% 100%, 0 100%)`;
+                        handle.style.left = value + "%";
+                        line.style.left = value + "%";
+                    });
+                }
+            });
+        }
+
+        // Navbar Sticky Style change on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-lg');
+                nav.classList.remove('py-4');
+                nav.classList.add('py-2');
+            } else {
+                nav.classList.remove('shadow-lg');
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2');
+            }
+        });
+
+        // Initialize on Load
+        document.addEventListener('DOMContentLoaded', () => {
+            initScrollAnimations();
+            initBaSlider();
+        });
+    </script>
+</body>
+
+</html>
