@@ -474,6 +474,96 @@
                     </div>
                 </div>
             </div>
+            <div class="py-20 bg-slate-900 text-white relative overflow-hidden">
+                <div class="container mx-auto px-4 relative z-10">
+                    <div class="text-center mb-16 reveal">
+                        <div
+                            class="inline-block bg-primary/20 text-primaryLight px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
+                            <i class="fas fa-play-circle mr-2"></i> Watch Us Work
+                        </div>
+                        <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">See The Satisfaction</h2>
+                        <p class="text-slate-400 max-w-2xl mx-auto">Watch our certified technicians obliterate years of
+                            baked-on grease in seconds.</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 reveal">
+                        <div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl group bg-slate-800">
+                            <video autoplay loop muted playsinline
+                                class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                                <source src="./assets/videos/hood-cleaning.mp4" type="video/mp4">
+                            </video>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-4 md:p-6">
+                                <div>
+                                    <h4 class="font-bold text-white text-sm md:text-lg leading-tight">Fan Degreasing
+                                    </h4>
+                                    <p class="text-primaryLight text-xs mt-1 hidden md:block">Rooftop exhaust cleaning
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl group bg-slate-800 md:translate-y-6">
+                            <video autoplay loop muted playsinline
+                                class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                                <source
+                                    src="https://assets.mixkit.co/videos/preview/mixkit-washing-a-dirty-floor-with-a-high-pressure-washer-41662-large.mp4"
+                                    type="video/mp4">
+                            </video>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-4 md:p-6">
+                                <div>
+                                    <h4 class="font-bold text-white text-sm md:text-lg leading-tight">Filter Washing
+                                    </h4>
+                                    <p class="text-primaryLight text-xs mt-1 hidden md:block">Baffle filter restoration
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl group bg-slate-800">
+                            <video autoplay loop muted playsinline
+                                class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                                <source
+                                    src="https://assets.mixkit.co/videos/preview/mixkit-cleaning-a-carpet-with-a-vacuum-cleaner-42931-large.mp4"
+                                    type="video/mp4">
+                            </video>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-4 md:p-6">
+                                <div>
+                                    <h4 class="font-bold text-white text-sm md:text-lg leading-tight">Duct Scraping</h4>
+                                    <p class="text-primaryLight text-xs mt-1 hidden md:block">Deep internal cleaning</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl group bg-slate-800 md:translate-y-6">
+                            <video autoplay loop muted playsinline
+                                class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                                <source
+                                    src="https://assets.mixkit.co/videos/preview/mixkit-cleaning-a-floor-with-a-mop-41617-large.mp4"
+                                    type="video/mp4">
+                            </video>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-4 md:p-6">
+                                <div>
+                                    <h4 class="font-bold text-white text-sm md:text-lg leading-tight">Canopy Polish</h4>
+                                    <p class="text-primaryLight text-xs mt-1 hidden md:block">Final stainless shine</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-16 md:mt-24 reveal">
+                        <button onclick="navigate('services')"
+                            class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-3 rounded-full font-bold transition backdrop-blur-sm">
+                            View Our Services
+                        </button>
+                    </div>
+                </div>
+            </div>
 
             <!-- Before & After Comparison Section -->
             <div class="py-20 bg-white">
@@ -571,20 +661,7 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Quick CTA -->
-            <div class="bg-secondary text-white py-16">
-                <div class="container mx-auto px-4 text-center reveal">
-                    <h2 class="font-heading text-3xl font-bold mb-6">Don't Wait for an Inspection Failure or Fire</h2>
-                    <p class="text-slate-300 mb-8 max-w-2xl mx-auto">Get your free, no-obligation estimate today. We
-                        work around your schedule, offering overnight and early morning services to avoid disrupting
-                        your business.</p>
-                    <button onclick="toggleModal('quoteModal')"
-                        class="bg-primary hover:bg-white hover:text-primary text-white px-8 py-4 rounded-full font-bold text-lg transition duration-300">
-                        Schedule Your Cleaning Now
-                    </button>
-                </div>
-            </div>
+            <div class="cta-container"></div>
         </section>
 
         <!-- ================= ABOUT US ================= -->
@@ -653,6 +730,7 @@
                     </div>
                 </div>
             </div>
+            <div class="cta-container"></div>
         </section>
 
         <!-- ================= SERVICES & INDUSTRIES ================= -->
@@ -728,8 +806,8 @@
                         </div>
                     </div>
                     <div class="reveal">
-                        <img src="https://images.unsplash.com/photo-1556910096-6f5e72db6803?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="Clean Hood System" class="rounded-2xl shadow-xl h-full object-cover">
+                        <img src="./assets/images/GridArt_20260312_113925783 (1).jpg" alt="Clean Hood System"
+                            class="rounded-2xl shadow-xl h-full object-cover">
                     </div>
                 </div>
 
@@ -782,6 +860,69 @@
                         </div>
                     </div>
                 </div>
+                <div class="mt-24 mb-10 reveal">
+                    <div class="text-center mb-12">
+                        <h2 class="font-heading text-3xl font-bold text-secondary mb-4">Our Recent Work</h2>
+                        <p class="text-slate-600 max-w-2xl mx-auto">Browse our gallery of restored commercial kitchen
+                            exhaust systems. We guarantee a clean down to the bare metal.</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+                        <div class="overflow-hidden rounded-2xl h-48 md:h-64 shadow-md group cursor-pointer relative">
+                            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=1170&auto=format&fit=crop"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
+                                alt="Clean Kitchen Hood">
+                            <div
+                                class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                                <i class="fas fa-search-plus text-white text-3xl"></i>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-2xl h-48 md:h-64 shadow-md group cursor-pointer relative">
+                            <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=1170&auto=format&fit=crop"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
+                                alt="Restaurant Exhaust System">
+                            <div
+                                class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                                <i class="fas fa-search-plus text-white text-3xl"></i>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-2xl h-48 md:h-64 shadow-md group cursor-pointer relative">
+                            <img src="https://images.unsplash.com/photo-1556910096-6f5e72db6803?q=80&w=1170&auto=format&fit=crop"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
+                                alt="Polished Stainless Steel">
+                            <div
+                                class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                                <i class="fas fa-search-plus text-white text-3xl"></i>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-2xl h-48 md:h-64 shadow-md group cursor-pointer relative">
+                            <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?q=80&w=1169&auto=format&fit=crop"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
+                                alt="Industrial Kitchen">
+                            <div
+                                class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                                <i class="fas fa-search-plus text-white text-3xl"></i>
+                            </div>
+                        </div>
+                        <div
+                            class="overflow-hidden rounded-2xl h-48 md:h-64 shadow-md group cursor-pointer relative md:col-span-2">
+                            <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=1170&auto=format&fit=crop"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
+                                alt="Wide Kitchen View">
+                            <div
+                                class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                                <i class="fas fa-search-plus text-white text-3xl"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 text-center">
+                        <button onclick="toggleModal('quoteModal')"
+                            class="bg-secondary hover:bg-slate-900 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg transition duration-300">
+                            Get Your Kitchen This Clean
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -812,22 +953,22 @@
                                 <li><i class="fas fa-map-marker-alt text-primary/50 mr-2"></i> Central District</li>
                             </ul>
                         </div>
-                        <p class="text-sm text-slate-500 italic">Don't see your area? Contact us. We frequently travel
-                            outside our primary zones for large commercial contracts.</p>
                     </div>
 
                     <!-- Fake Map Placeholder -->
                     <div
-                        class="bg-slate-200 h-96 rounded-2xl flex items-center justify-center reveal shadow-inner relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80"
-                            alt="Map" class="absolute inset-0 w-full h-full object-cover opacity-50 grayscale">
-                        <div class="relative z-10 text-center">
+                        class="relative bg-slate-200 h-96 rounded-2xl flex items-center justify-center reveal shadow-inner relative overflow-hidden">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d208643.20440354972!2d-80.98697102825189!3d35.20522179153824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88541fc4fc381a81%3A0x884650e6bf43d164!2sCharlotte%2C%20NC%2C%20USA!5e0!3m2!1sen!2sth!4v1773455744922!5m2!1sen!2sth"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <!-- <div class="absolute top-1/2 left-1/2 -translate-x-1/2 z-10 text-center">
                             <i class="fas fa-map-pin text-5xl text-primary mb-4 drop-shadow-md float-anim"></i>
-                            <h3 class="text-2xl font-bold text-secondary drop-shadow-md">Coverage Map</h3>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
+            <div class="cta-container"></div>
         </section>
 
         <!-- ================= FAQs ================= -->
@@ -922,14 +1063,8 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="text-center mt-12 reveal">
-                    <p class="text-slate-600 mb-4">Still have questions?</p>
-                    <button onclick="navigate('contact')"
-                        class="bg-primary text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-primaryDark transition">Contact
-                        Us Directly</button>
-                </div>
             </div>
+            <div class="cta-container"></div>
         </section>
 
         <!-- ================= CONTACT US ================= -->
@@ -1040,7 +1175,7 @@
                     owners.</p>
             </div>
 
-            <div class="container mx-auto px-4 py-20">
+            <div class="container max-w-7xl mx-auto px-4 py-20">
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- Blog Card 1 -->
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden reveal flex flex-col cursor-pointer group"
@@ -1492,6 +1627,15 @@
         document.addEventListener('DOMContentLoaded', () => {
             initScrollAnimations();
             initBaSlider();
+            fetch('cta.html')
+                .then(response => response.text())
+                .then(data => {
+                    const ctaContainers = document.querySelectorAll('.cta-container');
+                    ctaContainers.forEach(container => {
+                        container.innerHTML = data;
+                    });
+                })
+                .catch(error => console.error('Error loading CTA:', error));
         });
     </script>
 </body>
