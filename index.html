@@ -24,6 +24,9 @@
         tailwind.config = {
             theme: {
                 extend: {
+                    screens: {
+                        '3xl': '1600px',   // Extending standard sizes
+                    },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         heading: ['Montserrat', 'sans-serif'],
@@ -290,7 +293,7 @@
                 </div>
 
                 <div
-                    class="container mx-auto px-4 py-24 lg:py-32 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+                    class="container mx-auto px-4 py-24 relative z-10 grid lg:grid-cols-2 gap-12 items-center md:max-w-7xl 3xl:max-w-[96rem]">
                     <div class="reveal">
                         <div
                             class="inline-block bg-primary/20 text-primaryLight px-4 py-1.5 rounded-full text-sm font-semibold mb-6 border border-primary/30">
@@ -381,7 +384,7 @@
 
             <!-- Google Reviews Section -->
             <div class="py-16 bg-slate-50 border-b border-slate-200">
-                <div class="container mx-auto px-4">
+                <div class="container mx-auto px-4 md:max-w-7xl 3xl:max-w-[96rem]">
                     <div class="text-center mb-12 reveal">
                         <div class="flex justify-center items-center space-x-2 mb-4">
                             <i class="fab fa-google text-2xl" style="color: #4285F4;"></i>
@@ -478,7 +481,7 @@
                 </div>
             </div>
             <div class="py-20 bg-slate-900 text-white relative overflow-hidden">
-                <div class="container mx-auto px-4 relative z-10">
+                <div class="container mx-auto px-4 relative z-10 md:max-w-7xl 3xl:max-w-[96rem]">
                     <div class="text-center mb-16 reveal">
                         <div
                             class="inline-block bg-primary/20 text-primaryLight px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
@@ -565,7 +568,7 @@
 
             <!-- Before & After Comparison Section -->
             <div class="py-20 bg-white">
-                <div class="container mx-auto px-4">
+                <div class="container mx-auto px-4 md:max-w-7xl 3xl:max-w-[96rem]">
                     <div class="text-center max-w-3xl mx-auto mb-16 reveal">
                         <h2 class="font-heading text-3xl md:text-4xl font-bold text-secondary mb-4">The Andaman
                             Difference: <span class="text-primary">Before & After</span></h2>
@@ -607,7 +610,7 @@
 
             <!-- Features/Services Snippet -->
             <div class="py-20 bg-primaryLight relative">
-                <div class="container mx-auto px-4">
+                <div class="container mx-auto px-4 md:max-w-7xl 3xl:max-w-[96rem]">
                     <div class="text-center mb-16 reveal">
                         <h2 class="font-heading text-3xl md:text-4xl font-bold text-secondary mb-4">Comprehensive Fire
                             Prevention</h2>
@@ -670,11 +673,11 @@
                     standards of commercial kitchen maintenance.</p>
             </div>
 
-            <div class="container mx-auto px-4 py-20">
+            <div class="container mx-auto px-4 py-20 md:max-w-7xl 3xl:max-w-[96rem]">
                 <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
                     <div class="reveal">
-                        <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&q=80"
-                            alt="Team at work" class="rounded-2xl shadow-xl">
+                        <img src="https://placehold.co/800x500?text=TBA - Team image" alt="Team at work"
+                            class="rounded-2xl shadow-xl">
                     </div>
                     <div class="reveal">
                         <h2 class="text-primary font-bold tracking-wider uppercase text-sm mb-2">Our Story</h2>
@@ -739,7 +742,7 @@
                     type of commercial kitchen.</p>
             </div>
 
-            <div class="container mx-auto px-4 py-20">
+            <div class="container mx-auto px-4 py-20 md:max-w-7xl 3xl:max-w-[96rem]">
                 <!-- Services -->
                 <div class="grid md:grid-cols-2 gap-16 mb-24">
                     <div class="reveal">
@@ -805,7 +808,7 @@
                     </div>
                     <div class="reveal">
                         <img src="./assets/images/GridArt_20260312_113925783 (1).jpg" alt="Clean Hood System"
-                            class="rounded-2xl shadow-xl h-full object-cover">
+                            class="rounded-2xl overflow-hidden w-full object-contain">
                     </div>
                 </div>
 
@@ -816,48 +819,37 @@
                         <p class="text-slate-600">If you have a commercial kitchen, we have the expertise to keep it
                             safe.</p>
                     </div>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                        <div class="bg-white p-6 rounded-xl shadow text-center group hover:bg-primary transition">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                        <div
+                            class="bg-white p-8 rounded-2xl shadow-md text-center group hover:bg-primary transition transform hover:-translate-y-2">
                             <i
-                                class="fas fa-utensils text-4xl text-slate-300 group-hover:text-white mb-4 transition"></i>
-                            <h4 class="font-bold text-secondary group-hover:text-white transition">Restaurants</h4>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl shadow text-center group hover:bg-primary transition">
-                            <i
-                                class="fas fa-hospital text-4xl text-slate-300 group-hover:text-white mb-4 transition"></i>
-                            <h4 class="font-bold text-secondary group-hover:text-white transition">Hospitals</h4>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl shadow text-center group hover:bg-primary transition">
-                            <i class="fas fa-school text-4xl text-slate-300 group-hover:text-white mb-4 transition"></i>
-                            <h4 class="font-bold text-secondary group-hover:text-white transition">Schools &
-                                Universities</h4>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl shadow text-center group hover:bg-primary transition">
-                            <i class="fas fa-hotel text-4xl text-slate-300 group-hover:text-white mb-4 transition"></i>
-                            <h4 class="font-bold text-secondary group-hover:text-white transition">Hotels & Resorts</h4>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl shadow text-center group hover:bg-primary transition">
-                            <i class="fas fa-church text-4xl text-slate-300 group-hover:text-white mb-4 transition"></i>
-                            <h4 class="font-bold text-secondary group-hover:text-white transition">Churches</h4>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl shadow text-center group hover:bg-primary transition">
-                            <i
-                                class="fas fa-shopping-cart text-4xl text-slate-300 group-hover:text-white mb-4 transition"></i>
-                            <h4 class="font-bold text-secondary group-hover:text-white transition">Supermarkets</h4>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl shadow text-center group hover:bg-primary transition">
-                            <i
-                                class="fas fa-glass-cheers text-4xl text-slate-300 group-hover:text-white mb-4 transition"></i>
-                            <h4 class="font-bold text-secondary group-hover:text-white transition">Bars & Clubs</h4>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl shadow text-center group hover:bg-primary transition">
-                            <i
-                                class="fas fa-industry text-4xl text-slate-300 group-hover:text-white mb-4 transition"></i>
-                            <h4 class="font-bold text-secondary group-hover:text-white transition">Industrial Facilities
+                                class="fas fa-utensils text-5xl text-slate-300 group-hover:text-white mb-6 transition"></i>
+                            <h4 class="font-bold text-xl text-secondary group-hover:text-white transition">Restaurants
                             </h4>
+                            <p class="text-slate-500 text-sm mt-3 group-hover:text-primaryLight transition">From
+                                fast-casual to fine dining, we handle all grease volume types and hood setups.</p>
+                        </div>
+                        <div
+                            class="bg-white p-8 rounded-2xl shadow-md text-center group hover:bg-primary transition transform hover:-translate-y-2">
+                            <i class="fas fa-hotel text-5xl text-slate-300 group-hover:text-white mb-6 transition"></i>
+                            <h4 class="font-bold text-xl text-secondary group-hover:text-white transition">Hotels &
+                                Resorts</h4>
+                            <p class="text-slate-500 text-sm mt-3 group-hover:text-primaryLight transition">Discreet,
+                                flexible off-hours scheduling to ensure your continuous hospitality operations are never
+                                interrupted.</p>
+                        </div>
+                        <div
+                            class="bg-white p-8 rounded-2xl shadow-md text-center group hover:bg-primary transition transform hover:-translate-y-2">
+                            <i
+                                class="fas fa-glass-cheers text-5xl text-slate-300 group-hover:text-white mb-6 transition"></i>
+                            <h4 class="font-bold text-xl text-secondary group-hover:text-white transition">Bars & Clubs
+                            </h4>
+                            <p class="text-slate-500 text-sm mt-3 group-hover:text-primaryLight transition">Specialized
+                                deep degreasing for late-night venues, pub kitchens, and high-volume fryers.</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="mt-24 mb-10 reveal">
                     <div class="text-center mb-12">
                         <h2 class="font-heading text-3xl font-bold text-secondary mb-4">Our Recent Work</h2>
@@ -865,58 +857,12 @@
                             exhaust systems. We guarantee a clean down to the bare metal.</p>
                     </div>
 
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-                        <div class="overflow-hidden rounded-2xl h-48 md:h-64 shadow-md group cursor-pointer relative">
-                            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=1170&auto=format&fit=crop"
-                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
-                                alt="Clean Kitchen Hood">
-                            <div
-                                class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                                <i class="fas fa-search-plus text-white text-3xl"></i>
-                            </div>
-                        </div>
-                        <div class="overflow-hidden rounded-2xl h-48 md:h-64 shadow-md group cursor-pointer relative">
-                            <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=1170&auto=format&fit=crop"
-                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
-                                alt="Restaurant Exhaust System">
-                            <div
-                                class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                                <i class="fas fa-search-plus text-white text-3xl"></i>
-                            </div>
-                        </div>
-                        <div class="overflow-hidden rounded-2xl h-48 md:h-64 shadow-md group cursor-pointer relative">
-                            <img src="https://images.unsplash.com/photo-1556910096-6f5e72db6803?q=80&w=1170&auto=format&fit=crop"
-                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
-                                alt="Polished Stainless Steel">
-                            <div
-                                class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                                <i class="fas fa-search-plus text-white text-3xl"></i>
-                            </div>
-                        </div>
-                        <div class="overflow-hidden rounded-2xl h-48 md:h-64 shadow-md group cursor-pointer relative">
-                            <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?q=80&w=1169&auto=format&fit=crop"
-                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
-                                alt="Industrial Kitchen">
-                            <div
-                                class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                                <i class="fas fa-search-plus text-white text-3xl"></i>
-                            </div>
-                        </div>
-                        <div
-                            class="overflow-hidden rounded-2xl h-48 md:h-64 shadow-md group cursor-pointer relative md:col-span-2">
-                            <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=1170&auto=format&fit=crop"
-                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
-                                alt="Wide Kitchen View">
-                            <div
-                                class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                                <i class="fas fa-search-plus text-white text-3xl"></i>
-                            </div>
-                        </div>
+                    <div id="recent-work-gallery" class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4">
                     </div>
 
-                    <div class="mt-12 text-center">
+                    <div class="mt-16 text-center">
                         <button onclick="toggleModal('quoteModal')"
-                            class="bg-secondary hover:bg-slate-900 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg transition duration-300">
+                            class="bg-secondary hover:bg-slate-900 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg transition duration-300 transform hover:-translate-y-1">
                             Get Your Kitchen This Clean
                         </button>
                     </div>
@@ -932,7 +878,7 @@
                     Hood Cleaning operates.</p>
             </div>
 
-            <div class="container mx-auto px-4 py-20">
+            <div class="container mx-auto px-4 py-20 md:max-w-7xl 3xl:max-w-[96rem]">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="reveal">
                         <h2 class="font-heading text-3xl font-bold text-secondary mb-6">Proudly Serving Your Region</h2>
@@ -1073,7 +1019,7 @@
                     for emergency assistance.</p>
             </div>
 
-            <div class="container mx-auto px-4 py-20">
+            <div class="container mx-auto px-4 py-20 md:max-w-7xl 3xl:max-w-[96rem]">
                 <div class="grid md:grid-cols-2 gap-16">
                     <div class="reveal">
                         <h2 class="font-heading text-3xl font-bold text-secondary mb-6">Get In Touch</h2>
@@ -1115,50 +1061,61 @@
                     </div>
 
                     <!-- Contact Form -->
-                    <div class="bg-white p-8 rounded-2xl shadow-xl border border-slate-100 reveal">
+                    <div class="bg-white p-8 rounded-2xl shadow-2xl reveal">
+                        <h3 class="font-heading text-2xl font-bold mb-2">Send Us a Message</h3>
+                        <p class="text-slate-500 text-sm mb-6">Fill out your details below and we'll contact you shortly
+                            to discuss your system and schedule an inspection.</p>
                         <form onsubmit="event.preventDefault(); alert('Message Sent! We will get back to you soon.');">
-                            <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div class="space-y-4">
                                 <div>
-                                    <label class="block text-sm font-medium text-slate-700 mb-1">First Name</label>
+                                    <label class="block text-sm font-medium mb-1">Full Name</label>
                                     <input type="text"
-                                        class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"
-                                        required>
+                                        class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+                                        required placeholder="John Doe">
                                 </div>
                                 <div>
-                                    <label class="block text-sm font-medium text-slate-700 mb-1">Last Name</label>
+                                    <label class="block text-sm font-medium mb-1">Restaurant/Business Name</label>
                                     <input type="text"
-                                        class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"
-                                        required>
+                                        class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+                                        required placeholder="The Great Grill">
                                 </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium mb-1">Phone</label>
+                                        <input type="tel"
+                                            class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+                                            required placeholder="(555) 000-0000">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium mb-1">Email</label>
+                                        <input type="email"
+                                            class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+                                            required placeholder="john@example.com">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-1">When was your last cleaning?</label>
+                                    <select required
+                                        class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none text-slate-600">
+                                        <option value="" disabled selected>Select an option...</option>
+                                        <option>Less than 3 months ago</option>
+                                        <option>3-6 months ago</option>
+                                        <option>Over 6 months ago</option>
+                                        <option>Never / Brand New</option>
+                                        <option>Not sure</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-1">How can we help?</label>
+                                    <textarea rows="3"
+                                        class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+                                        required placeholder="Briefly describe your request..."></textarea>
+                                </div>
+                                <button type="submit"
+                                    class="w-full bg-secondary hover:bg-slate-900 text-white font-bold py-3.5 rounded-lg shadow-lg transition">
+                                    Send Message <i class="fas fa-paper-plane ml-2"></i>
+                                </button>
                             </div>
-                            <div class="mb-4">
-                                <label class="block text-sm font-medium text-slate-700 mb-1">Business Name</label>
-                                <input type="text"
-                                    class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"
-                                    required>
-                            </div>
-                            <div class="mb-4">
-                                <label class="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
-                                <input type="email"
-                                    class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"
-                                    required>
-                            </div>
-                            <div class="mb-4">
-                                <label class="block text-sm font-medium text-slate-700 mb-1">Phone Number</label>
-                                <input type="tel"
-                                    class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"
-                                    required>
-                            </div>
-                            <div class="mb-6">
-                                <label class="block text-sm font-medium text-slate-700 mb-1">How can we help?</label>
-                                <textarea rows="4"
-                                    class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"
-                                    required></textarea>
-                            </div>
-                            <button type="submit"
-                                class="w-full bg-primary hover:bg-primaryDark text-white font-bold py-3 rounded-lg shadow-lg transition">
-                                Send Message
-                            </button>
                         </form>
                     </div>
                 </div>
@@ -1173,7 +1130,7 @@
                     owners.</p>
             </div>
 
-            <div class="container max-w-7xl mx-auto px-4 py-20">
+            <div class="container md:max-w-7xl 3xl:max-w-[96rem] mx-auto px-4 py-20">
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- Blog Card 1 -->
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden reveal flex flex-col cursor-pointer group"
@@ -1534,6 +1491,40 @@
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('hidden');
         }
+        // Gallery Images Data Array
+        const galleryImages = [
+            { src: "./assets/images/20260222_121452.jpg", alt: "Clean Kitchen Hood" },
+            { src: "./assets/images/20260312_015136.jpg", alt: "Restaurant Exhaust System" },
+            { src: "./assets/images/20260312_015206.jpg", alt: "Polished Stainless Steel" },
+            { src: "./assets/images/20260312_063900.jpg", alt: "Industrial Kitchen Hood" },
+            { src: "./assets/images/FB_IMG_1764811572825.jpg", alt: "Hood Cleaning Recent Work" },
+            { src: "./assets/images/FB_IMG_1764811662070.jpg", alt: "Exhaust System Maintenance" },
+            { src: "./assets/images/FB_IMG_1764813671107.jpg", alt: "Bare Metal Clean" },
+            { src: "./assets/images/FB_IMG_1764915844281.jpg", alt: "Commercial Kitchen Cleaning" },
+            { src: "./assets/images/FB_IMG_1764921921633.jpg", alt: "Grease Removal Before and After" },
+            { src: "./assets/images/FB_IMG_1764921924662.jpg", alt: "Ventilation System Cleaned" },
+            { src: "./assets/images/FB_IMG_1771587729004.jpg", alt: "Certified Hood Cleaning" }
+        ];
+
+        // Function to render the gallery
+        function initGallery() {
+            const galleryContainer = document.getElementById('recent-work-gallery');
+            if (!galleryContainer) return;
+
+            let galleryHTML = '';
+            galleryImages.forEach(image => {
+                // Notice the blue overlay and icon are removed, but we kept a subtle zoom effect (group-hover:scale-105)
+                galleryHTML += `
+                    <div class="break-inside-avoid overflow-hidden rounded-2xl shadow-sm hover:shadow-xl group mb-4">
+                        <img src="${image.src}" 
+                             class="w-full object-cover transform group-hover:scale-105 transition duration-500" 
+                             alt="${image.alt}">
+                    </div>
+                `;
+            });
+
+            galleryContainer.innerHTML = galleryHTML;
+        }
 
         // Modal Logic
         function toggleModal(modalId) {
@@ -1636,6 +1627,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             initScrollAnimations();
             initBaSlider();
+            initGallery();
             fetch('cta.html')
                 .then(response => response.text())
                 .then(data => {
