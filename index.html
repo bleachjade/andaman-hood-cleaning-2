@@ -169,23 +169,6 @@
             color: #0ea5e9;
             font-size: 1.2rem;
         }
-
-        /* Loader */
-        .loader {
-            border-top-color: #0ea5e9;
-            -webkit-animation: spinner 1.5s linear infinite;
-            animation: spinner 1.5s linear infinite;
-        }
-
-        @keyframes spinner {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
     </style>
 </head>
 
@@ -247,7 +230,7 @@
                     class="nav-link text-slate-600 hover:text-primary font-medium transition">FAQs</a>
                 <a href="#" onclick="navigate('contact')"
                     class="nav-link text-slate-600 hover:text-primary font-medium transition">Contact</a>
-                <button onclick="toggleModal('quoteModal')"
+                <button onclick="navigate('contact')"
                     class="bg-primary hover:bg-primaryDark text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-primary/30 transition transform hover:-translate-y-0.5">
                     Get a Quote
                 </button>
@@ -273,7 +256,7 @@
                 <a href="#" onclick="navigate('faq'); toggleMobileMenu()" class="text-slate-600 font-medium">FAQs</a>
                 <a href="#" onclick="navigate('contact'); toggleMobileMenu()"
                     class="text-slate-600 font-medium">Contact</a>
-                <button onclick="toggleModal('quoteModal'); toggleMobileMenu()"
+                <button onclick="navigate('contact'); toggleMobileMenu()"
                     class="bg-primary text-white px-6 py-3 rounded-md font-semibold text-center">Get a Quote</button>
             </div>
         </div>
@@ -289,25 +272,27 @@
                 <div class="absolute inset-0">
                     <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80"
                         alt="Commercial Kitchen" class="w-full h-full object-cover opacity-20">
-                    <div class="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/90 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/80 to-secondary/40">
+                    </div>
                 </div>
 
                 <div
-                    class="container mx-auto px-4 py-24 relative z-10 grid lg:grid-cols-2 gap-12 items-center md:max-w-7xl 3xl:max-w-[96rem]">
+                    class="container mx-auto px-4 py-32 relative z-10 flex flex-col items-center text-center max-w-4xl">
                     <div class="reveal">
                         <div
-                            class="inline-block bg-primary/20 text-primaryLight px-4 py-1.5 rounded-full text-sm font-semibold mb-6 border border-primary/30">
+                            class="inline-block bg-primary/20 text-primaryLight px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/30">
                             <i class="fas fa-shield-alt mr-2"></i> NFPA 96 Certified Professionals
                         </div>
-                        <h1 class="font-heading text-4xl lg:text-6xl font-bold leading-tight mb-6">
+                        <h1
+                            class="font-heading text-4xl lg:text-6xl md:text-5xl font-bold leading-tight mb-6 drop-shadow-lg">
                             Protect Your Kitchen with <span class="text-primary">Expert Hood Cleaning</span>
                         </h1>
-                        <p class="text-lg text-slate-300 mb-8 max-w-xl">
+                        <p class="text-lg text-slate-300 mb-10 max-w-2xl mx-auto drop-shadow-md">
                             Andaman Hood Cleaning provides elite, certified exhaust system cleaning to prevent fire
                             hazards, ensure health code compliance, and keep your commercial kitchen running safely.
                         </p>
-                        <div class="flex flex-wrap gap-4">
-                            <button onclick="toggleModal('quoteModal')"
+                        <div class="flex flex-wrap gap-4 justify-center">
+                            <button onclick="navigate('contact')"
                                 class="bg-primary hover:bg-primaryDark text-white px-8 py-3.5 rounded-full font-bold text-lg shadow-lg shadow-primary/40 transition transform hover:scale-105">
                                 Request Free Inspection
                             </button>
@@ -316,68 +301,18 @@
                                 Explore Services
                             </button>
                         </div>
-                        <div class="mt-10 flex items-center space-x-6 text-sm text-slate-400 font-medium">
-                            <div class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Fully
+                        <div
+                            class="mt-12 flex flex-wrap justify-center items-center gap-6 text-sm text-slate-300 font-medium">
+                            <div class="flex items-center"><i class="fas fa-check-circle text-primary mr-2 text-lg"></i>
+                                Fully
                                 Insured</div>
-                            <div class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Photo
+                            <div class="flex items-center"><i class="fas fa-check-circle text-primary mr-2 text-lg"></i>
+                                Photo
                                 Proof Provided</div>
-                            <div class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> 24/7
+                            <div class="flex items-center"><i class="fas fa-check-circle text-primary mr-2 text-lg"></i>
+                                24/7
                                 Support</div>
                         </div>
-                    </div>
-
-                    <!-- Hero Lead Capture Form -->
-                    <div class="bg-white text-slate-800 p-8 rounded-2xl shadow-2xl reveal">
-                        <h3 class="font-heading text-2xl font-bold mb-2">Request a Custom Estimate</h3>
-                        <p class="text-slate-500 text-sm mb-6">Every kitchen is unique. Provide your basic details below
-                            and we'll call you to discuss your system and pricing.</p>
-                        <form
-                            onsubmit="event.preventDefault(); alert('Thank you! We will contact you shortly to discuss your estimate.');">
-                            <div class="space-y-4">
-                                <div>
-                                    <label class="block text-sm font-medium mb-1">Full Name</label>
-                                    <input type="text"
-                                        class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"
-                                        required placeholder="John Doe">
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium mb-1">Restaurant/Business Name</label>
-                                    <input type="text"
-                                        class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"
-                                        required placeholder="The Great Grill">
-                                </div>
-                                <div class="grid grid-cols-2 gap-4">
-                                    <div>
-                                        <label class="block text-sm font-medium mb-1">Phone</label>
-                                        <input type="tel"
-                                            class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"
-                                            required placeholder="(555) 000-0000">
-                                    </div>
-                                    <div>
-                                        <label class="block text-sm font-medium mb-1">Email</label>
-                                        <input type="email"
-                                            class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"
-                                            required placeholder="john@example.com">
-                                    </div>
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium mb-1">When was your last cleaning?</label>
-                                    <select required
-                                        class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary outline-none">
-                                        <option value="" disabled selected>Select an option...</option>
-                                        <option>Less than 3 months ago</option>
-                                        <option>3-6 months ago</option>
-                                        <option>Over 6 months ago</option>
-                                        <option>Never / Brand New</option>
-                                        <option>Not sure</option>
-                                    </select>
-                                </div>
-                                <button type="submit"
-                                    class="w-full bg-secondary hover:bg-slate-900 text-white font-bold py-3 rounded-lg shadow-lg transition">
-                                    Request Callback <i class="fas fa-phone-alt ml-2"></i>
-                                </button>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -582,15 +517,15 @@
                         <div
                             class="ba-slider relative w-full max-w-4xl mx-auto h-64 md:h-[500px] overflow-hidden rounded-2xl shadow-2xl bg-slate-200">
                             <!-- "After" Image (Clean) -->
-                            <img src="https://images.unsplash.com/photo-1556910096-6f5e72db6803?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                class="absolute inset-0 w-full h-full object-cover" alt="Clean Hood">
+                            <img src="./assets/images/after.jpg" class="absolute inset-0 w-full h-full object-cover"
+                                alt="Clean Hood">
                             <div
                                 class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded text-sm font-bold shadow z-0">
                                 AFTER</div>
 
                             <!-- "Before" Image (Dirty/Greasy - Simulated with a darker industrial image) -->
                             <div class="ba-before" id="baBeforeHome">
-                                <img src="https://images.unsplash.com/photo-1736433622548-4adbbc1c2cf2?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                <img src="./assets/images/before.jpg"
                                     class="absolute inset-0 w-full h-full object-cover" alt="Dirty Hood">
                                 <div
                                     class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded text-sm font-bold shadow">
@@ -624,7 +559,6 @@
                             class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition duration-300 reveal text-center">
                             <div
                                 class="w-16 h-16 bg-primaryLight rounded-full flex items-center justify-center mx-auto mb-6 text-primary text-2xl">
-                                <i class="fas fa-тяg"></i> <!-- Fallback icon -->
                                 <i class="fas fa-fan"></i>
                             </div>
                             <h3 class="font-bold text-xl mb-3 text-secondary">Exhaust Fan Cleaning</h3>
@@ -807,7 +741,7 @@
                         </div>
                     </div>
                     <div class="reveal">
-                        <img src="./assets/images/GridArt_20260312_113925783 (1).jpg" alt="Clean Hood System"
+                        <img src="./assets/images/GridArt_20260312_114048354 (1).jpg" alt="Clean Hood System"
                             class="rounded-2xl overflow-hidden w-full object-contain">
                     </div>
                 </div>
@@ -861,7 +795,7 @@
                     </div>
 
                     <div class="mt-16 text-center">
-                        <button onclick="toggleModal('quoteModal')"
+                        <button onclick="navigate('contact')"
                             class="bg-secondary hover:bg-slate-900 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg transition duration-300 transform hover:-translate-y-1">
                             Get Your Kitchen This Clean
                         </button>
@@ -906,9 +840,6 @@
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d208643.20440354972!2d-80.98697102825189!3d35.20522179153824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88541fc4fc381a81%3A0x884650e6bf43d164!2sCharlotte%2C%20NC%2C%20USA!5e0!3m2!1sen!2sth!4v1773455744922!5m2!1sen!2sth"
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <!-- <div class="absolute top-1/2 left-1/2 -translate-x-1/2 z-10 text-center">
-                            <i class="fas fa-map-pin text-5xl text-primary mb-4 drop-shadow-md float-anim"></i>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -1011,22 +942,26 @@
             <div class="cta-container"></div>
         </section>
 
-        <!-- ================= CONTACT US ================= -->
+        <!-- ================= CONTACT US (Scheduling Form) ================= -->
         <section id="page-contact" class="page-view">
             <div class="bg-secondary py-16 text-center text-white">
-                <h1 class="font-heading text-4xl font-bold mb-4">Contact Us</h1>
+                <h1 class="font-heading text-4xl font-bold mb-4">Contact Us & Scheduling</h1>
                 <p class="text-slate-300 max-w-2xl mx-auto px-4">Reach out for a free quote, to schedule a service, or
                     for emergency assistance.</p>
             </div>
 
             <div class="container mx-auto px-4 py-20 md:max-w-7xl 3xl:max-w-[96rem]">
-                <div class="grid md:grid-cols-2 gap-16">
-                    <div class="reveal">
-                        <h2 class="font-heading text-3xl font-bold text-secondary mb-6">Get In Touch</h2>
-                        <p class="text-slate-600 mb-8">Ready to secure your kitchen? Fill out the form, and a member of
-                            the Andaman team will contact you promptly to arrange an on-site inspection.</p>
+                <div class="grid md:grid-cols-12 gap-12 lg:gap-16">
 
-                        <div class="space-y-6">
+                    <!-- Contact Info Panel -->
+                    <div class="md:col-span-5 reveal">
+                        <h2 class="font-heading text-3xl font-bold text-secondary mb-6">Get In Touch</h2>
+                        <p class="text-slate-600 mb-8">Ready to secure your kitchen? Fill out our scheduling request
+                            form, and a member of
+                            the Andaman team will contact you promptly to arrange your service or on-site inspection.
+                        </p>
+
+                        <div class="space-y-6 bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
                             <div class="flex items-start">
                                 <div
                                     class="w-12 h-12 bg-primaryLight text-primary rounded-full flex items-center justify-center text-xl shrink-0">
@@ -1060,60 +995,166 @@
                         </div>
                     </div>
 
-                    <!-- Contact Form -->
-                    <div class="bg-white p-8 rounded-2xl shadow-2xl reveal">
-                        <h3 class="font-heading text-2xl font-bold mb-2">Send Us a Message</h3>
-                        <p class="text-slate-500 text-sm mb-6">Fill out your details below and we'll contact you shortly
-                            to discuss your system and schedule an inspection.</p>
-                        <form onsubmit="event.preventDefault(); alert('Message Sent! We will get back to you soon.');">
-                            <div class="space-y-4">
-                                <div>
-                                    <label class="block text-sm font-medium mb-1">Full Name</label>
-                                    <input type="text"
-                                        class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"
-                                        required placeholder="John Doe">
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium mb-1">Restaurant/Business Name</label>
-                                    <input type="text"
-                                        class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"
-                                        required placeholder="The Great Grill">
-                                </div>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Comprehensive Scheduling Form -->
+                    <div
+                        class="bg-white p-8 lg:p-10 rounded-2xl shadow-2xl reveal relative overflow-hidden md:col-span-7">
+
+                        <div id="successOverlay"
+                            class="absolute inset-0 bg-white/95 backdrop-blur-sm z-10 hidden flex-col items-center justify-center text-center p-8 transition-opacity duration-300 opacity-0">
+                            <div
+                                class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-3xl mb-4">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <h3 class="font-heading text-2xl font-bold text-secondary mb-2">Request Received!</h3>
+                            <p class="text-slate-600">Thank you for reaching out. A member of our team will contact you
+                                shortly to confirm your schedule.</p>
+                            <button onclick="resetForm()" class="mt-6 text-primary font-semibold hover:underline">Submit
+                                another request</button>
+                        </div>
+
+                        <h3 class="font-heading text-2xl font-bold mb-2">Service Scheduling Request</h3>
+                        <p class="text-slate-500 text-sm mb-8">Please provide your details below. This helps us ensure
+                            we have the right team and equipment for your location.</p>
+
+                        <form id="schedulingForm" novalidate>
+                            <div class="space-y-5">
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
                                     <div>
-                                        <label class="block text-sm font-medium mb-1">Phone</label>
-                                        <input type="tel"
-                                            class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"
-                                            required placeholder="(555) 000-0000">
+                                        <label class="block text-sm font-medium text-slate-700 mb-1">First Name
+                                            *</label>
+                                        <input type="text" id="firstName" required
+                                            class="peer w-full px-4 h-11 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500 invalid:[&:not(:placeholder-shown):not(:focus)]:ring-red-500 valid:[&:not(:placeholder-shown)]:border-green-500 transition-colors"
+                                            placeholder="John">
+                                        <span
+                                            class="mt-1 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">First
+                                            name is required.</span>
                                     </div>
                                     <div>
-                                        <label class="block text-sm font-medium mb-1">Email</label>
-                                        <input type="email"
-                                            class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"
-                                            required placeholder="john@example.com">
+                                        <label class="block text-sm font-medium text-slate-700 mb-1">Last Name *</label>
+                                        <input type="text" id="lastName" required
+                                            class="peer w-full px-4 h-11 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500 invalid:[&:not(:placeholder-shown):not(:focus)]:ring-red-500 valid:[&:not(:placeholder-shown)]:border-green-500 transition-colors"
+                                            placeholder="Doe">
                                     </div>
                                 </div>
+
                                 <div>
-                                    <label class="block text-sm font-medium mb-1">When was your last cleaning?</label>
-                                    <select required
-                                        class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none text-slate-600">
-                                        <option value="" disabled selected>Select an option...</option>
-                                        <option>Less than 3 months ago</option>
-                                        <option>3-6 months ago</option>
-                                        <option>Over 6 months ago</option>
-                                        <option>Never / Brand New</option>
-                                        <option>Not sure</option>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1">Company / Restaurant
+                                        Name</label>
+                                    <input type="text" id="company"
+                                        class="w-full px-4 h-11 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+                                        placeholder="e.g. The Great Grill">
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-700 mb-1">Email Address
+                                            *</label>
+                                        <input type="email" id="email" required
+                                            class="peer w-full px-4 h-11 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500 invalid:[&:not(:placeholder-shown):not(:focus)]:ring-red-500 valid:[&:not(:placeholder-shown)]:border-green-500 transition-colors"
+                                            placeholder="john@example.com">
+                                        <span
+                                            class="mt-1 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">Please
+                                            enter a valid email.</span>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-700 mb-1">Phone Number
+                                            *</label>
+                                        <input type="tel" id="phone" required pattern="^\(\d{3}\) \d{3}-\d{4}$"
+                                            title="Please enter a valid 10-digit US phone number"
+                                            class="peer w-full px-4 h-11 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500 invalid:[&:not(:placeholder-shown):not(:focus)]:ring-red-500 valid:[&:not(:placeholder-shown)]:border-green-500 transition-colors"
+                                            placeholder="(555) 123-4567" maxlength="14">
+                                        <span
+                                            class="mt-1 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">Please
+                                            enter a full 10-digit number.</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1">Service Address
+                                        *</label>
+                                    <input type="text" id="street" required
+                                        class="w-full px-4 h-11 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none mb-3"
+                                        placeholder="Street Address">
+
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                        <input type="text" id="city" required
+                                            class="w-full px-4 h-11 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+                                            placeholder="City">
+
+                                        <div class="relative">
+                                            <input type="text" id="state" required pattern="^[A-Za-z]{2}$"
+                                                class="peer w-full px-4 h-11 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500 invalid:[&:not(:placeholder-shown):not(:focus)]:ring-red-500 valid:[&:not(:placeholder-shown)]:border-green-500 transition-colors"
+                                                placeholder="State (e.g. CA)">
+                                            <span
+                                                class="mt-1 hidden text-xs text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">2-letter
+                                                code</span>
+                                        </div>
+
+                                        <div class="relative">
+                                            <input type="text" id="zip" required pattern="^\d{5}(-\d{4})?$"
+                                                class="peer w-full px-4 h-11 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500 invalid:[&:not(:placeholder-shown):not(:focus)]:ring-red-500 valid:[&:not(:placeholder-shown)]:border-green-500 transition-colors"
+                                                placeholder="ZIP Code">
+                                            <span
+                                                class="mt-1 hidden text-xs text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">5-digit
+                                                code</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1">Service Requested
+                                        *</label>
+                                    <select id="serviceType" required
+                                        class="w-full px-4 h-11 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none text-slate-600 bg-white">
+                                        <option value="" disabled selected>Select a service...</option>
+                                        <option value="hood_cleaning">Complete Hood System Cleaning</option>
+                                        <option value="exhaust_fan">Exhaust Fan Maintenance</option>
+                                        <option value="filter_replacement">Filter Replacement</option>
+                                        <option value="grease_containment">Grease Containment Solution</option>
+                                        <option value="other">General Inquiry / Other</option>
                                     </select>
                                 </div>
-                                <div>
-                                    <label class="block text-sm font-medium mb-1">How can we help?</label>
-                                    <textarea rows="3"
-                                        class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"
-                                        required placeholder="Briefly describe your request..."></textarea>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-700 mb-1">Preferred
+                                            Date</label>
+                                        <input type="date" id="prefDate"
+                                            class="w-full px-4 h-11 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none text-slate-600">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-slate-700 mb-1">Preferred
+                                            Time</label>
+                                        <select id="prefTime"
+                                            class="w-full px-4 h-11 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none text-slate-600 bg-white">
+                                            <option value="any">Any Time</option>
+                                            <option value="morning">Morning (8AM - 12PM)</option>
+                                            <option value="afternoon">Afternoon (12PM - 4PM)</option>
+                                            <option value="evening">Evening / After Hours</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <button type="submit"
-                                    class="w-full bg-secondary hover:bg-slate-900 text-white font-bold py-3.5 rounded-lg shadow-lg transition">
-                                    Send Message <i class="fas fa-paper-plane ml-2"></i>
+
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1">Additional
+                                        Details</label>
+                                    <textarea id="message" rows="4"
+                                        class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+                                        placeholder="Please provide any specific details about your kitchen or request (e.g., number of hoods, last clean date, etc.)..."></textarea>
+                                </div>
+
+                                <div id="formError"
+                                    class="hidden text-red-500 text-sm font-medium p-3 bg-red-50 rounded-lg border border-red-200">
+                                    <i class="fas fa-exclamation-circle mr-2"></i> Please correct the highlighted fields
+                                    before submitting.
+                                </div>
+
+                                <button type="submit" id="submitBtn"
+                                    class="w-full bg-secondary hover:bg-slate-900 text-white font-bold py-4 rounded-lg shadow-lg transition duration-300 flex justify-center items-center mt-4">
+                                    <span id="btnText">Submit Request</span>
+                                    <i id="btnIcon" class="fas fa-paper-plane ml-2"></i>
+                                    <i id="btnSpinner" class="fas fa-circle-notch fa-spin ml-2 hidden"></i>
                                 </button>
                             </div>
                         </form>
@@ -1250,7 +1291,7 @@
                         <h3 class="font-bold text-xl text-secondary mb-2">Need an Inspection?</h3>
                         <p class="mb-4">Not sure if your kitchen is up to code? The experts at Andaman Hood Cleaning can
                             perform a thorough assessment of your system.</p>
-                        <button onclick="toggleModal('quoteModal')"
+                        <button onclick="navigate('contact')"
                             class="bg-primary text-white px-6 py-2 rounded-lg font-bold">Request Assessment</button>
                     </div>
                 </div>
@@ -1376,79 +1417,10 @@
     </footer>
 
     <!-- Floating Action Button (Mobile Quote) -->
-    <button onclick="toggleModal('quoteModal')"
+    <button onclick="navigate('contact')"
         class="fixed bottom-6 right-6 lg:hidden bg-primary text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl z-40 float-anim">
         <i class="fas fa-clipboard-list"></i>
     </button>
-
-    <!-- Global Modal for Lead Capture -->
-    <div id="quoteModal"
-        class="fixed inset-0 bg-slate-900/70 z-[100] hidden flex items-center justify-center p-4 backdrop-blur-sm transition-opacity duration-300 opacity-0">
-        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden transform scale-95 transition-transform duration-300"
-            id="quoteModalContent">
-            <div class="bg-primary p-6 text-white relative">
-                <button onclick="toggleModal('quoteModal')"
-                    class="absolute top-4 right-4 text-white hover:text-slate-200">
-                    <i class="fas fa-times text-xl"></i>
-                </button>
-                <h3 class="font-heading text-2xl font-bold">Get a Custom Estimate</h3>
-                <p class="text-primaryLight text-sm mt-1">We'll call you to discuss your hood system and provide an
-                    accurate quote.</p>
-            </div>
-            <div class="p-6">
-                <form
-                    onsubmit="event.preventDefault(); alert('Request Submitted! We will contact you soon.'); toggleModal('quoteModal');">
-                    <div class="space-y-4">
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
-                                <input type="text"
-                                    class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"
-                                    required>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-slate-700 mb-1">Phone</label>
-                                <input type="tel"
-                                    class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"
-                                    required>
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1">Business/Restaurant
-                                Name</label>
-                            <input type="text"
-                                class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"
-                                required>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
-                            <input type="email"
-                                class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"
-                                required>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1">When was your last
-                                cleaning?</label>
-                            <select required
-                                class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary outline-none">
-                                <option value="" disabled selected>Select an option...</option>
-                                <option>Less than 3 months ago</option>
-                                <option>3-6 months ago</option>
-                                <option>Over 6 months ago</option>
-                                <option>Never / Brand New</option>
-                                <option>Not sure</option>
-                            </select>
-                        </div>
-                        <button type="submit"
-                            class="w-full bg-secondary hover:bg-slate-900 text-white font-bold py-3 rounded-lg shadow-lg transition mt-4">
-                            Request Callback
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
 
     <!-- Application Logic -->
     <script>
@@ -1491,6 +1463,7 @@
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('hidden');
         }
+
         // Gallery Images Data Array
         const galleryImages = [
             { src: "./assets/images/20260222_121452.jpg", alt: "Clean Kitchen Hood" },
@@ -1513,7 +1486,6 @@
 
             let galleryHTML = '';
             galleryImages.forEach(image => {
-                // Notice the blue overlay and icon are removed, but we kept a subtle zoom effect (group-hover:scale-105)
                 galleryHTML += `
                     <div class="break-inside-avoid overflow-hidden rounded-2xl shadow-sm hover:shadow-xl group mb-4">
                         <img src="${image.src}" 
@@ -1524,28 +1496,6 @@
             });
 
             galleryContainer.innerHTML = galleryHTML;
-        }
-
-        // Modal Logic
-        function toggleModal(modalId) {
-            const modal = document.getElementById(modalId);
-            const content = document.getElementById(modalId + 'Content');
-
-            if (modal.classList.contains('hidden')) {
-                // Open
-                modal.classList.remove('hidden');
-                setTimeout(() => {
-                    modal.classList.remove('opacity-0');
-                    content.classList.remove('scale-95');
-                }, 10);
-            } else {
-                // Close
-                modal.classList.add('opacity-0');
-                content.classList.add('scale-95');
-                setTimeout(() => {
-                    modal.classList.add('hidden');
-                }, 300);
-            }
         }
 
         // FAQ Accordion
@@ -1628,6 +1578,7 @@
             initScrollAnimations();
             initBaSlider();
             initGallery();
+
             fetch('cta.html')
                 .then(response => response.text())
                 .then(data => {
@@ -1638,6 +1589,100 @@
                 })
                 .catch(error => console.error('Error loading CTA:', error));
         });
+    </script>
+    <script>
+        const form = document.getElementById('schedulingForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const btnIcon = document.getElementById('btnIcon');
+        const btnSpinner = document.getElementById('btnSpinner');
+        const formError = document.getElementById('formError');
+        const successOverlay = document.getElementById('successOverlay');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent standard page reload
+
+            // Check if HTML5 validation passes
+            if (!form.checkValidity()) {
+                // Trigger native validation UI
+                form.reportValidity();
+                formError.classList.remove('hidden');
+                return;
+            }
+
+            // Hide error message if validation passes
+            formError.classList.add('hidden');
+
+            // Extract data (Useful for sending to a backend)
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                company: document.getElementById('company').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                address: {
+                    street: document.getElementById('street').value,
+                    city: document.getElementById('city').value,
+                    state: document.getElementById('state').value,
+                    zip: document.getElementById('zip').value,
+                },
+                serviceType: document.getElementById('serviceType').value,
+                prefDate: document.getElementById('prefDate').value,
+                prefTime: document.getElementById('prefTime').value,
+                message: document.getElementById('message').value
+            };
+
+            // UI: Set loading state
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+            btnText.textContent = 'Sending...';
+            btnIcon.classList.add('hidden');
+            btnSpinner.classList.remove('hidden');
+
+            // Simulate an API call / Backend request (e.g., fetch('your-api-endpoint', { ... }))
+            setTimeout(() => {
+                console.log('Form data ready for backend:', formData);
+
+                // Show success overlay
+                successOverlay.classList.remove('hidden');
+                setTimeout(() => {
+                    successOverlay.classList.remove('opacity-0');
+                }, 10);
+
+                // Reset UI state
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                btnText.textContent = 'Submit Request';
+                btnIcon.classList.remove('hidden');
+                btnSpinner.classList.add('hidden');
+
+            }, 1500); // Simulated 1.5 second network delay
+        });
+
+        // Function to reset the form and hide success message
+        function resetForm() {
+            form.reset();
+            successOverlay.classList.add('opacity-0');
+            setTimeout(() => {
+                successOverlay.classList.add('hidden');
+            }, 300);
+        }
+        // Phone Number Auto-Formatter
+        const phoneInput = document.getElementById('phone');
+        if (phoneInput) {
+            phoneInput.addEventListener('input', function (e) {
+                // Strip all non-numeric characters
+                let cleaned = e.target.value.replace(/\D/g, '');
+
+                // Match groups of 3, 3, and 4
+                let match = cleaned.match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+
+                // Format the output
+                if (match) {
+                    e.target.value = !match[2] ? match[1] : '(' + match[1] + ') ' + match[2] + (match[3] ? '-' + match[3] : '');
+                }
+            });
+        }
     </script>
 </body>
 
