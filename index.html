@@ -7,6 +7,7 @@
     <title>Andaman Hood Cleaning | Certified Commercial Kitchen Exhaust Cleaning</title>
     <meta name="description"
         content="Andaman Hood Cleaning offers professional, NFPA 96 certified commercial kitchen hood, exhaust, and duct cleaning services. Prevent fires and stay compliant.">
+    <link rel="icon" type="image/png" href="./assets/images/Logo2-Favicon_600x600.png">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -28,7 +29,7 @@
                         '3xl': '1600px',   // Extending standard sizes
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['Oswald', 'sans-serif'],
                         heading: ['Montserrat', 'sans-serif'],
                     },
                     colors: {
@@ -195,22 +196,13 @@
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <a href="#" onclick="navigate('home'); return false;" class="flex items-center gap-3 group">
                 <div class="w-16 h-16 relative flex-shrink-0">
-                    <svg viewBox="0 0 200 200" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="100" cy="100" r="95" fill="none" stroke="#1774b6" stroke-width="8" />
-                        <path d="M60 50 Q65 60 75 60 Q65 60 60 70 Q55 60 45 60 Q55 60 60 50" fill="#1774b6" />
-                        <path d="M85 45 Q88 52 95 52 Q88 52 85 59 Q82 52 75 52 Q82 52 85 45" fill="#1774b6" />
-                        <path d="M85 50 L115 50 L115 70 L160 105 L160 120 L40 120 L40 105 L85 70 Z" fill="#1774b6" />
-                        <path d="M35 130 Q100 155 165 130" fill="none" stroke="#2faee0" stroke-width="12"
-                            stroke-linecap="round" />
-                        <path d="M45 150 Q100 170 155 150" fill="none" stroke="#2faee0" stroke-width="12"
-                            stroke-linecap="round" />
-                    </svg>
+                    <img src="./assets/images/Logo2-Favicon_600x600.png" alt="logo">
                 </div>
                 <div class="flex flex-col">
                     <span
-                        class="text-2xl font-black text-brand-blue uppercase tracking-tight leading-none group-hover:text-primary transition-colors">Andaman
+                        class="text-2xl font-black text-brand-blue tracking-tight leading-none group-hover:text-primary transition-colors">Andaman
                         Hood</span>
-                    <span class="text-sm font-bold text-brand-light tracking-widest uppercase mt-1">Cleaning</span>
+                    <span class="text-sm font-bold text-brand-light tracking-widest uppercase mt-1 font-[Montserrat]">Cleaning</span>
                 </div>
             </a>
 
@@ -833,14 +825,68 @@
                         </div>
                     </div>
 
-                    <!-- Fake Map Placeholder -->
-                    <div
-                        class="relative bg-slate-200 h-96 rounded-2xl flex items-center justify-center reveal shadow-inner relative overflow-hidden">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d208643.20440354972!2d-80.98697102825189!3d35.20522179153824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88541fc4fc381a81%3A0x884650e6bf43d164!2sCharlotte%2C%20NC%2C%20USA!5e0!3m2!1sen!2sth!4v1773455744922!5m2!1sen!2sth"
+                    <div id="service-map-container"
+                        class="relative bg-slate-200 h-[40vh] rounded-2xl flex items-center justify-center shadow-inner overflow-hidden group">
+
+                        <div id="service-map-overlay"
+                            class="absolute inset-0 z-10 flex items-center justify-center bg-black/5 cursor-pointer transition-opacity duration-500">
+                            <div
+                                class="w-96 h-96 bg-blue-500/40 border-2 border-blue-500 rounded-full flex items-center justify-center backdrop-blur-[1px] shadow-lg">
+                                <span
+                                    class="bg-white/90 text-slate-800 text-sm font-bold px-3 py-1 rounded-full shadow pointer-events-none">
+                                    Click map to interact
+                                </span>
+                            </div>
+                        </div>
+
+                        <iframe id="google-map-iframe"
+                            src="https://maps.google.com/maps?q=Charlotte,NC&t=&z=10&ie=UTF8&iwloc=&output=embed"
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            referrerpolicy="no-referrer-when-downgrade" class="absolute inset-0 z-0">
+                        </iframe>
                     </div>
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', () => {
+                            const mapContainer = document.getElementById('service-map-container');
+                            const mapOverlay = document.getElementById('service-map-overlay');
+                            const mapIframe = document.getElementById('google-map-iframe'); // Target the iframe
+                            let inactivityTimer;
+
+                            const hideOverlay = () => {
+                                mapOverlay.style.opacity = '0';
+                                mapOverlay.style.pointerEvents = 'none';
+                            };
+
+                            const showOverlay = () => {
+                                mapOverlay.style.opacity = '1';
+                                mapOverlay.style.pointerEvents = 'auto';
+
+                                // This forces the iframe to reload, resetting the pan and zoom!
+                                // (Note: There might be a slight visual flicker as it re-fetches the map)
+                                mapIframe.src = mapIframe.src;
+                            };
+
+                            // 1. Hide on click
+                            mapOverlay.addEventListener('click', () => {
+                                hideOverlay();
+                            });
+
+                            // 2. Start timer when mouse leaves container
+                            mapContainer.addEventListener('mouseleave', () => {
+                                if (mapOverlay.style.pointerEvents === 'none') {
+                                    inactivityTimer = setTimeout(() => {
+                                        showOverlay();
+                                    }, 4000); // Increased to 4 seconds so it doesn't reset too aggressively
+                                }
+                            });
+
+                            // 3. Cancel timer if mouse re-enters quickly
+                            mapContainer.addEventListener('mouseenter', () => {
+                                clearTimeout(inactivityTimer);
+                            });
+                        });
+                    </script>
                 </div>
             </div>
             <div class="cta-container"></div>
@@ -1337,11 +1383,7 @@
             <div class="grid md:grid-cols-4 gap-8 mb-12">
                 <div>
                     <a href="#" onclick="navigate('home')" class="flex items-center space-x-2 mb-6">
-                        <div class="w-8 h-8 bg-primary text-white rounded flex items-center justify-center text-sm">
-                            <i class="fas fa-wind"></i>
-                        </div>
-                        <span class="font-heading font-bold text-xl text-white">Andaman<span
-                                class="text-primary">Hood</span></span>
+                        <img class="w-auto h-20 rounded" src="./assets/images/Logo2-Landscape.jpg" alt="footer-logo">
                     </a>
                     <p class="text-sm mb-6">The premier provider of commercial kitchen exhaust cleaning, protecting
                         businesses from fire hazards with certified, thorough service.</p>
